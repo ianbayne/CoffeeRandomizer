@@ -8,7 +8,7 @@
 
 import React, {useState} from 'react';
 import {
-  Button,
+  TouchableOpacity,
   SafeAreaView,
   StyleSheet,
   ScrollView,
@@ -54,7 +54,11 @@ const App: () => React$Node = () => {
               Welcome to the Aeropress Recipe maker!
             </Text>
           </View>
-          <Button title="Randomize" onPress={onPress} />
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.button} onPress={onPress}>
+              <Text style={styles.buttonText}>Randomize</Text>
+            </TouchableOpacity>
+          </View>
           <Text>{stirring}</Text>
           <Text>{waterTemp}</Text>
           <Text>{coffeeToWaterRatio}</Text>
@@ -68,12 +72,32 @@ const App: () => React$Node = () => {
 
 const styles = StyleSheet.create({
   header: {
-    marginTop: 20,
+    marginVertical: 20,
   },
   headerText: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  button: {
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 10,
+    width: 200,
+    backgroundColor: '#eee',
+    marginTop: 10,
+    marginBottom: 30,
+  },
+  buttonText: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    textAlign: 'center',
+    color: '#555',
+  },
+  buttonContainer: {
+    flex: 1,
+    alignItems: 'center',
   },
 });
 
