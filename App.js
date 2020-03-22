@@ -44,26 +44,114 @@ const App: () => React$Node = () => {
     setBloomTimeAndInversion(selectRandomItem(BLOOM_TIME_AND_INVERSION));
   }
 
+  function grindCoffeeStep() {
+    if (coffeeToWaterRatio !== null && grindAndBrewTime !== null) {
+      return (
+        <Text>
+          • Grind
+          <Text style={{fontWeight: 'bold'}}>
+            {' '}
+            {coffeeToWaterRatio.coffee}{' '}
+          </Text>
+          of coffee to a
+          <Text style={{fontWeight: 'bold'}}> {grindAndBrewTime.grind} </Text>
+          consistency.
+        </Text>
+      );
+    }
+  }
+
+  function heatWaterStep() {
+    if (coffeeToWaterRatio !== null && waterTemp !== null) {
+      return (
+        <Text>
+          • Heat
+          <Text style={{fontWeight: 'bold'}}> {coffeeToWaterRatio.water} </Text>
+          of water to a temperature of
+          <Text style={{fontWeight: 'bold'}}> {waterTemp}</Text>.
+        </Text>
+      );
+    }
+  }
+
+  function orientationStep() {
+    if (bloomTimeAndInversion !== null) {
+      return (
+        <Text>
+          • Put the aeropress in
+          <Text style={{fontWeight: 'bold'}}>
+            {' '}
+            {bloomTimeAndInversion.orientation}{' '}
+          </Text>
+          orientation and add the coffee.
+        </Text>
+      );
+    }
+  }
+
+  function bloomStep() {
+    if (bloomTimeAndInversion !== null && bloomTimeAndInversion.bloom) {
+      return (
+        <Text>
+          • Add{' '}
+          <Text style={{fontWeight: 'bold'}}>
+            {bloomTimeAndInversion.water}
+          </Text>{' '}
+          and bloom for{' '}
+          <Text style={{fontWeight: 'bold'}}>{bloomTimeAndInversion.time}</Text>
+          .
+        </Text>
+      );
+    }
+  }
+
+  function brewStep() {
+    if (grindAndBrewTime !== null) {
+      return (
+        <Text>
+          • Add the remaining water and wait for
+          <Text style={{fontWeight: 'bold'}}> {grindAndBrewTime.time}</Text>.
+        </Text>
+      );
+    }
+  }
+
+  function stirStep() {
+    if (stirring !== null) {
+      return `• ${stirring}.`;
+    }
+  }
+
   return (
     <React.Fragment>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView>
+      <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+        <ScrollView style={styles.container}>
           <View style={styles.header}>
             <Text style={styles.headerText}>
               Welcome to the Aeropress Recipe maker!
             </Text>
           </View>
-          <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.button} onPress={onPress}>
-              <Text style={styles.buttonText}>Randomize</Text>
-            </TouchableOpacity>
+          <View style={styles.container2}>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.button} onPress={onPress}>
+                <Text style={styles.buttonText}>Randomize</Text>
+              </TouchableOpacity>
+            </View>
+            <Text style={styles.steps}>{grindCoffeeStep()}</Text>
+            <Text style={styles.steps}>{heatWaterStep()}</Text>
+            <Text style={styles.steps}>{orientationStep()}</Text>
+            {bloomTimeAndInversion !== null && bloomTimeAndInversion.bloom && (
+              <Text style={styles.steps}>{bloomStep()}</Text>
+            )}
+            <Text style={styles.steps}>{brewStep()}</Text>
+            <Text style={styles.steps}>{stirStep()}</Text>
+            {stirring !== null && <Text style={styles.steps}>• Press.</Text>}
+            {coffeeToWaterRatio !== null &&
+              coffeeToWaterRatio.diluteToShare && (
+                <Text style={styles.steps}>• Dilute to share.</Text>
+              )}
           </View>
-          <Text>{stirring}</Text>
-          <Text>{waterTemp}</Text>
-          <Text>{coffeeToWaterRatio}</Text>
-          <Text>{grindAndBrewTime}</Text>
-          <Text>{bloomTimeAndInversion}</Text>
         </ScrollView>
       </SafeAreaView>
     </React.Fragment>
@@ -72,7 +160,10 @@ const App: () => React$Node = () => {
 
 const styles = StyleSheet.create({
   header: {
-    marginVertical: 20,
+    paddingVertical: 20,
+    backgroundColor: '#eefddd',
+    borderColor: '#ddd',
+    width: '100%',
   },
   headerText: {
     fontSize: 24,
@@ -98,6 +189,18 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flex: 1,
     alignItems: 'center',
+    marginTop: 25,
+  },
+  container: {
+    backgroundColor: '#fff',
+  },
+  container2: {
+    paddingHorizontal: 30,
+    backgroundColor: '#fff',
+  },
+  steps: {
+    fontSize: 20,
+    lineHeight: 30,
   },
 });
 

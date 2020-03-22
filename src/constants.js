@@ -1,33 +1,40 @@
 export const STIRRING = [
-  'Stir 1 time before pressing',
-  'NSEW stir before pressing',
+  'Stir 1 time',
+  'Stir in a NSEW direction',
   'Stir 2 times in the same direction before pressing',
-  'Stir once in each direction before pressing',
+  'Stir once in each direction',
   "Don't stir",
-  'Your choice',
+  'Your choice of how to stir',
 ];
-export const WATER_TEMPERATURE = [75, 80, 85, 90, 95, 'your choice'];
+export const WATER_TEMPERATURE = [
+  '75 °C',
+  '80 °C',
+  '85 °C',
+  '90 °C',
+  '95 °C',
+  'your choice',
+];
 export const COFFEE_TO_WATER_RATIO = [
-  '12g coffee to 200g water',
-  '15g coffee to 200g water',
-  '15g coffee to 250g water',
-  '24g coffee to 200g water (Dilute to share)',
-  '30g coffee to 200g water (Dilute to share)',
-  'Your choice',
+  {coffee: '12g', water: '200g'},
+  {coffee: '15g', water: '200g'},
+  {coffee: '15g', water: '250g'},
+  {coffee: '24g', water: '200g', diluteToShare: true},
+  {coffee: '30g', water: '200g', diluteToShare: true},
+  {coffee: 'your choice', water: 'your choice'},
 ];
 export const GRIND_AND_BREW_TIME = [
-  'Very fine, 30s',
-  'Fine, 60s',
-  'Medium fine, 90s',
-  'Medium, 120s',
-  'Coarse, 4min',
-  'Your choice',
+  {grind: 'very fine', time: '30s'},
+  {grind: 'fine', time: '60s'},
+  {grind: 'medium fine', time: '90s'},
+  {grind: 'medium', time: '120s'},
+  {grind: 'coarse', time: '4min'},
+  {grind: 'your choice', time: 'your choice'},
 ];
 export const BLOOM_TIME_AND_INVERSION = [
-  'Standard orientation, no bloom',
-  'Inverted orientation, no bloom',
-  'Standard orientation, 30s bloom with 30g water',
-  'Standard orientation, 30s bloom with 60g water',
-  'Inverted orientation, 30s bloom with 30g water',
-  'Inverted orientation, 30s bloom with 60g water',
+  {orientation: 'standard', bloom: false},
+  {orientation: 'standard', bloom: true, time: '30s', water: '30g'},
+  {orientation: 'standard', bloom: true, time: '30s', water: '60g'},
+  {orientation: 'inverted', bloom: false},
+  {orientation: 'inverted', bloom: true, time: '30s', water: '30g'},
+  {orientation: 'inverted', bloom: true, time: '30s', water: '60g'},
 ];
