@@ -252,6 +252,7 @@ const styles = StyleSheet.create({
   },
   mainContent: {
     paddingHorizontal: 30,
+    paddingBottom: 30,
     backgroundColor: '#fff',
   },
   steps: {
