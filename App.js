@@ -47,16 +47,19 @@ const App: () => React$Node = () => {
   function grindCoffeeStep() {
     if (coffeeToWaterRatio !== null && grindAndBrewTime !== null) {
       return (
-        <Text>
-          • Grind
-          <Text style={{fontWeight: 'bold'}}>
-            {' '}
-            {coffeeToWaterRatio.coffee}{' '}
+        <View style={{flexDirection: 'row'}}>
+          <Text style={({paddingRight: 5}, styles.steps)}>1. </Text>
+          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+            Grind
+            <Text style={{fontWeight: 'bold'}}>
+              {' '}
+              {coffeeToWaterRatio.coffee}{' '}
+            </Text>
+            of coffee to a
+            <Text style={{fontWeight: 'bold'}}> {grindAndBrewTime.grind} </Text>
+            consistency.
           </Text>
-          of coffee to a
-          <Text style={{fontWeight: 'bold'}}> {grindAndBrewTime.grind} </Text>
-          consistency.
-        </Text>
+        </View>
       );
     }
   }
@@ -64,12 +67,18 @@ const App: () => React$Node = () => {
   function heatWaterStep() {
     if (coffeeToWaterRatio !== null && waterTemp !== null) {
       return (
-        <Text>
-          • Heat
-          <Text style={{fontWeight: 'bold'}}> {coffeeToWaterRatio.water} </Text>
-          of water to a temperature of
-          <Text style={{fontWeight: 'bold'}}> {waterTemp}</Text>.
-        </Text>
+        <View style={{flexDirection: 'row'}}>
+          <Text style={({paddingRight: 5}, styles.steps)}>2. </Text>
+          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+            Heat
+            <Text style={{fontWeight: 'bold'}}>
+              {' '}
+              {coffeeToWaterRatio.water}{' '}
+            </Text>
+            of water to a temperature of
+            <Text style={{fontWeight: 'bold'}}> {waterTemp}</Text>.
+          </Text>
+        </View>
       );
     }
   }
@@ -77,14 +86,17 @@ const App: () => React$Node = () => {
   function orientationStep() {
     if (bloomTimeAndInversion !== null) {
       return (
-        <Text>
-          • Put the aeropress in
-          <Text style={{fontWeight: 'bold'}}>
-            {' '}
-            {bloomTimeAndInversion.orientation}{' '}
+        <View style={{flexDirection: 'row'}}>
+          <Text style={({paddingRight: 5}, styles.steps)}>3. </Text>
+          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+            Put the aeropress in
+            <Text style={{fontWeight: 'bold'}}>
+              {' '}
+              {bloomTimeAndInversion.orientation}{' '}
+            </Text>
+            orientation and add the coffee.
           </Text>
-          orientation and add the coffee.
-        </Text>
+        </View>
       );
     }
   }
@@ -92,15 +104,20 @@ const App: () => React$Node = () => {
   function bloomStep() {
     if (bloomTimeAndInversion !== null && bloomTimeAndInversion.bloom) {
       return (
-        <Text>
-          • Add{' '}
-          <Text style={{fontWeight: 'bold'}}>
-            {bloomTimeAndInversion.water}
-          </Text>{' '}
-          and bloom for{' '}
-          <Text style={{fontWeight: 'bold'}}>{bloomTimeAndInversion.time}</Text>
-          .
-        </Text>
+        <View style={{flexDirection: 'row'}}>
+          <Text style={({paddingRight: 5}, styles.steps)}>4. </Text>
+          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+            Add{' '}
+            <Text style={{fontWeight: 'bold'}}>
+              {bloomTimeAndInversion.water}
+            </Text>{' '}
+            and bloom for{' '}
+            <Text style={{fontWeight: 'bold'}}>
+              {bloomTimeAndInversion.time}
+            </Text>
+            .
+          </Text>
+        </View>
       );
     }
   }
@@ -108,17 +125,27 @@ const App: () => React$Node = () => {
   function brewStep() {
     if (grindAndBrewTime !== null) {
       return (
-        <Text>
-          • Add the remaining water and wait for
-          <Text style={{fontWeight: 'bold'}}> {grindAndBrewTime.time}</Text>.
-        </Text>
+        <View style={{flexDirection: 'row'}}>
+          <Text style={({paddingRight: 5}, styles.steps)}>5. </Text>
+          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+            Add the remaining water and wait for
+            <Text style={{fontWeight: 'bold'}}> {grindAndBrewTime.time}</Text>.
+          </Text>
+        </View>
       );
     }
   }
 
   function stirStep() {
     if (stirring !== null) {
-      return `• ${stirring}.`;
+      return (
+        <View style={{flexDirection: 'row'}}>
+          <Text style={({paddingRight: 5}, styles.steps)}>6. </Text>
+          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+            {stirring}.
+          </Text>
+        </View>
+      );
     }
   }
 
@@ -137,28 +164,32 @@ const App: () => React$Node = () => {
               <Text style={styles.buttonText}>Randomize</Text>
             </TouchableOpacity>
           </View>
-          <View style={styles.container2}>
-            <View style={styles.buttonContainer}>
-              <TouchableOpacity style={styles.button} onPress={onPress}>
-                <Text style={styles.buttonText}>Randomize</Text>
-              </TouchableOpacity>
+          <View>{grindCoffeeStep()}</View>
+          <View>{heatWaterStep()}</View>
+          <View>{orientationStep()}</View>
+          {bloomTimeAndInversion !== null && bloomTimeAndInversion.bloom && (
+            <View>{bloomStep()}</View>
+          )}
+          <View>{brewStep()}</View>
+          <View>{stirStep()}</View>
+          {stirring !== null && (
+            <View style={{flexDirection: 'row'}}>
+              <Text style={({paddingRight: 5}, styles.steps)}>7. </Text>
+              <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+                Press.
+              </Text>
             </View>
-            <Text style={styles.steps}>{grindCoffeeStep()}</Text>
-            <Text style={styles.steps}>{heatWaterStep()}</Text>
-            <Text style={styles.steps}>{orientationStep()}</Text>
-            {bloomTimeAndInversion !== null && bloomTimeAndInversion.bloom && (
-              <Text style={styles.steps}>{bloomStep()}</Text>
-            )}
-            <Text style={styles.steps}>{brewStep()}</Text>
-            <Text style={styles.steps}>{stirStep()}</Text>
-            {stirring !== null && <Text style={styles.steps}>• Press.</Text>}
-            {coffeeToWaterRatio !== null &&
-              coffeeToWaterRatio.diluteToShare && (
-                <Text style={styles.steps}>• Dilute to share.</Text>
-              )}
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+          )}
+          {coffeeToWaterRatio !== null && coffeeToWaterRatio.diluteToShare && (
+            <View style={{flexDirection: 'row'}}>
+              <Text style={({paddingRight: 5}, styles.steps)}>8. </Text>
+              <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+                Dilute to share.
+              </Text>
+            </View>
+          )}
+        </View>
+      </ScrollView>
     </React.Fragment>
   );
 };
