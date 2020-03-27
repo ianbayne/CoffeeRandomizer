@@ -124,13 +124,18 @@ const App: () => React$Node = () => {
 
   return (
     <React.Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
-        <ScrollView style={styles.container}>
-          <View style={styles.header}>
-            <Text style={styles.headerText}>
-              Welcome to the Aeropress Recipe maker!
-            </Text>
+      <StatusBar barStyle="light-content" />
+      <ScrollView style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.headerText}>
+            Welcome to the Aeropress Recipe maker!
+          </Text>
+        </View>
+        <View style={styles.mainContent}>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.button} onPress={onPress}>
+              <Text style={styles.buttonText}>Randomize</Text>
+            </TouchableOpacity>
           </View>
           <View style={styles.container2}>
             <View style={styles.buttonContainer}>
@@ -160,25 +165,45 @@ const App: () => React$Node = () => {
 
 const styles = StyleSheet.create({
   header: {
-    paddingVertical: 20,
-    backgroundColor: '#eefddd',
+    paddingTop: 70,
+    paddingBottom: 50,
+    backgroundColor: '#593C1F',
     borderColor: '#ddd',
     width: '100%',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
+    zIndex: 99,
   },
   headerText: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     textAlign: 'center',
+    color: 'white',
   },
   button: {
-    padding: 10,
-    borderWidth: 1,
+    paddingHorizontal: 10,
+    paddingVertical: 15,
+    borderWidth: 2,
     borderColor: '#ddd',
-    borderRadius: 10,
-    width: 200,
+    borderRadius: 15,
+    width: 225,
     backgroundColor: '#eee',
-    marginTop: 10,
-    marginBottom: 30,
+    marginTop: 30,
+    marginBottom: 40,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
   },
   buttonText: {
     fontWeight: 'bold',
@@ -194,7 +219,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
   },
-  container2: {
+  mainContent: {
     paddingHorizontal: 30,
     backgroundColor: '#fff',
   },
