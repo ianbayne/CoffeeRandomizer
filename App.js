@@ -1,17 +1,19 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import RecipesScreen from './src/screens/RecipesScreen';
+import SettingsScreen from './src/screens/SettingsScreen';
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const App: () => React$Node = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Recipes" component={RecipesScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName="Recipes">
+        <Tab.Screen name="Recipes" component={RecipesScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
