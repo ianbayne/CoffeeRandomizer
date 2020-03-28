@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {useState} from 'react';
 import {
   TouchableOpacity,
@@ -16,6 +8,7 @@ import {
   View,
   StatusBar,
 } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 import {
   STIRRING,
@@ -150,47 +143,50 @@ const App: () => React$Node = () => {
   }
 
   return (
-    <React.Fragment>
-      <StatusBar barStyle="light-content" />
-      <ScrollView style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.headerText}>
-            Welcome to the Aeropress Recipe maker!
-          </Text>
-        </View>
-        <View style={styles.mainContent}>
-          <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.button} onPress={onPress}>
-              <Text style={styles.buttonText}>Randomize</Text>
-            </TouchableOpacity>
-          </View>
-          <View>{grindCoffeeStep()}</View>
-          <View>{heatWaterStep()}</View>
-          <View>{orientationStep()}</View>
-          {bloomTimeAndInversion !== null && bloomTimeAndInversion.bloom && (
-            <View>{bloomStep()}</View>
-          )}
-          <View>{brewStep()}</View>
-          <View>{stirStep()}</View>
-          {stirring !== null && (
-            <View style={{flexDirection: 'row'}}>
-              <Text style={({paddingRight: 5}, styles.steps)}>7. </Text>
-              <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-                Press.
+    <NavigationContainer>
+      {
+        <React.Fragment>
+          <StatusBar barStyle="light-content" />
+          <ScrollView style={styles.container}>
+            <View style={styles.header}>
+              <Text style={styles.headerText}>
+                Welcome to the Aeropress Recipe maker!
               </Text>
             </View>
-          )}
-          {coffeeToWaterRatio !== null && coffeeToWaterRatio.diluteToShare && (
-            <View style={{flexDirection: 'row'}}>
-              <Text style={({paddingRight: 5}, styles.steps)}>8. </Text>
-              <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-                Dilute to share.
-              </Text>
+            <View style={styles.mainContent}>
+              <View style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.button} onPress={onPress}>
+                  <Text style={styles.buttonText}>Randomize</Text>
+                </TouchableOpacity>
+              </View>
+              <View>{grindCoffeeStep()}</View>
+              <View>{heatWaterStep()}</View>
+              <View>{orientationStep()}</View>
+              {bloomTimeAndInversion !== null &&
+                bloomTimeAndInversion.bloom && <View>{bloomStep()}</View>}
+              <View>{brewStep()}</View>
+              <View>{stirStep()}</View>
+              {stirring !== null && (
+                <View style={{flexDirection: 'row'}}>
+                  <Text style={({paddingRight: 5}, styles.steps)}>7. </Text>
+                  <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+                    Press.
+                  </Text>
+                </View>
+              )}
+              {coffeeToWaterRatio !== null && coffeeToWaterRatio.diluteToShare && (
+                <View style={{flexDirection: 'row'}}>
+                  <Text style={({paddingRight: 5}, styles.steps)}>8. </Text>
+                  <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+                    Dilute to share.
+                  </Text>
+                </View>
+              )}
             </View>
-          )}
-        </View>
-      </ScrollView>
-    </React.Fragment>
+          </ScrollView>
+        </React.Fragment>
+      }
+    </NavigationContainer>
   );
 };
 
