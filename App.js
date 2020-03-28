@@ -9,6 +9,7 @@ import {
   StatusBar,
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
 import {
   STIRRING,
@@ -18,7 +19,7 @@ import {
   BLOOM_TIME_AND_INVERSION,
 } from './src/constants';
 
-const App: () => React$Node = () => {
+function RecipesScreen() {
   const [stirring, setStirring] = useState(null);
   const [waterTemp, setWaterTemp] = useState(null);
   const [coffeeToWaterRatio, setCoffeeToWaterRatio] = useState(null);
@@ -141,51 +142,59 @@ const App: () => React$Node = () => {
       );
     }
   }
-
   return (
-    <NavigationContainer>
-      {
-        <React.Fragment>
-          <StatusBar barStyle="light-content" />
-          <ScrollView style={styles.container}>
-            <View style={styles.header}>
-              <Text style={styles.headerText}>
-                Welcome to the Aeropress Recipe maker!
+    <React.Fragment>
+      <StatusBar barStyle="light-content" />
+      <ScrollView style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.headerText}>
+            Welcome to the Aeropress Recipe maker!
+          </Text>
+        </View>
+        <View style={styles.mainContent}>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.button} onPress={onPress}>
+              <Text style={styles.buttonText}>Randomize</Text>
+            </TouchableOpacity>
+          </View>
+          <View>{grindCoffeeStep()}</View>
+          <View>{heatWaterStep()}</View>
+          <View>{orientationStep()}</View>
+          {bloomTimeAndInversion !== null && bloomTimeAndInversion.bloom && (
+            <View>{bloomStep()}</View>
+          )}
+          <View>{brewStep()}</View>
+          <View>{stirStep()}</View>
+          {stirring !== null && (
+            <View style={{flexDirection: 'row'}}>
+              <Text style={({paddingRight: 5}, styles.steps)}>7. </Text>
+              <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+                Press.
               </Text>
             </View>
-            <View style={styles.mainContent}>
-              <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.button} onPress={onPress}>
-                  <Text style={styles.buttonText}>Randomize</Text>
-                </TouchableOpacity>
-              </View>
-              <View>{grindCoffeeStep()}</View>
-              <View>{heatWaterStep()}</View>
-              <View>{orientationStep()}</View>
-              {bloomTimeAndInversion !== null &&
-                bloomTimeAndInversion.bloom && <View>{bloomStep()}</View>}
-              <View>{brewStep()}</View>
-              <View>{stirStep()}</View>
-              {stirring !== null && (
-                <View style={{flexDirection: 'row'}}>
-                  <Text style={({paddingRight: 5}, styles.steps)}>7. </Text>
-                  <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-                    Press.
-                  </Text>
-                </View>
-              )}
-              {coffeeToWaterRatio !== null && coffeeToWaterRatio.diluteToShare && (
-                <View style={{flexDirection: 'row'}}>
-                  <Text style={({paddingRight: 5}, styles.steps)}>8. </Text>
-                  <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-                    Dilute to share.
-                  </Text>
-                </View>
-              )}
+          )}
+          {coffeeToWaterRatio !== null && coffeeToWaterRatio.diluteToShare && (
+            <View style={{flexDirection: 'row'}}>
+              <Text style={({paddingRight: 5}, styles.steps)}>8. </Text>
+              <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
+                Dilute to share.
+              </Text>
             </View>
-          </ScrollView>
-        </React.Fragment>
-      }
+          )}
+        </View>
+      </ScrollView>
+    </React.Fragment>
+  );
+}
+
+const Stack = createStackNavigator();
+
+const App: () => React$Node = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Recipes" component={RecipesScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
