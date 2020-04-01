@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {
-  TouchableOpacity,
+  TouchableHighlight,
   StyleSheet,
   ScrollView,
   Text,
@@ -145,9 +145,13 @@ const RecipesScreen = () => {
       <ScrollView style={styles.container}>
         <View style={styles.mainContent}>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.button} onPress={onPress}>
+            <TouchableHighlight
+              style={styles.button}
+              activeOpacity={0.6}
+              underlayColor="#ddd"
+              onPress={onPress}>
               <Text style={styles.buttonText}>Randomize</Text>
-            </TouchableOpacity>
+            </TouchableHighlight>
           </View>
           <View>{grindCoffeeStep()}</View>
           <View>{heatWaterStep()}</View>
