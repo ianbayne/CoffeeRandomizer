@@ -3,8 +3,8 @@ import {Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import RecipesScreen from './src/screens/RecipesScreen';
-import SettingsScreen from './src/screens/SettingsScreen';
+import RecipesStackScreen from './src/screens/RecipesStackScreen';
+import SettingsStackScreen from './src/screens/SettingsStackScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,8 +31,8 @@ const App: () => React$Node = () => {
           inactiveTintColor: 'gray',
           showLabel: false,
         }}>
-        <Tab.Screen name="Recipes" component={RecipesScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="Recipes" component={RecipesStackScreen} />
+        <Tab.Screen name="Settings" component={SettingsStackScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
