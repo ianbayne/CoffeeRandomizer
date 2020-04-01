@@ -7,17 +7,14 @@ const RecipesStack = createStackNavigator();
 
 const RecipesStackScreen = () => {
   return (
-    <RecipesStack.Navigator>
-      <RecipesStack.Screen
-        name="Recipes"
-        component={RecipesScreen}
-        options={{
-          headerStyle: {
-            backgroundColor: '#593C1F',
-          },
-          headerTitleStyle: {color: 'white'},
-        }}
-      />
+    <RecipesStack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#593C1F',
+        },
+        headerTitleStyle: {color: 'white'},
+      }}>
+      <RecipesStack.Screen name="Recipes" component={RecipesScreen} />
     </RecipesStack.Navigator>
   );
 };
