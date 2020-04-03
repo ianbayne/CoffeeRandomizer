@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Text, View, StyleSheet, Switch} from 'react-native';
 
-const SettingsScreen = navigation => {
+const SettingsScreen = () => {
   const [celsius, setCelsius] = useState(true);
   function toggleCelsius(value) {
     setCelsius(value);
