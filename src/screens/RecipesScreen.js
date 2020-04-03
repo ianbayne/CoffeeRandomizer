@@ -28,11 +28,19 @@ const RecipesScreen = () => {
   }
 
   function onPress() {
-    setStirring(selectRandomItem(STIRRING));
-    setWaterTemp(selectRandomItem(WATER_TEMPERATURE));
-    setCoffeeToWaterRatio(selectRandomItem(COFFEE_TO_WATER_RATIO));
-    setGrindAndBrewTime(selectRandomItem(GRIND_AND_BREW_TIME));
-    setBloomTimeAndInversion(selectRandomItem(BLOOM_TIME_AND_INVERSION));
+    setStirring(null);
+    setWaterTemp(null);
+    setCoffeeToWaterRatio(null);
+    setGrindAndBrewTime(null);
+    setBloomTimeAndInversion(null);
+
+    setTimeout(() => {
+      setStirring(selectRandomItem(STIRRING));
+      setWaterTemp(selectRandomItem(WATER_TEMPERATURE));
+      setCoffeeToWaterRatio(selectRandomItem(COFFEE_TO_WATER_RATIO));
+      setGrindAndBrewTime(selectRandomItem(GRIND_AND_BREW_TIME));
+      setBloomTimeAndInversion(selectRandomItem(BLOOM_TIME_AND_INVERSION));
+    }, 200);
   }
 
   function grindCoffeeStep() {
