@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {
   TouchableHighlight,
   StyleSheet,
@@ -7,6 +7,8 @@ import {
   View,
   StatusBar,
 } from 'react-native';
+
+import UseCelsiusContext from '../context/use-celsius-context';
 
 import {
   STIRRING,
@@ -17,6 +19,8 @@ import {
 } from '../constants';
 
 const RecipesScreen = () => {
+  const {useCelsius, setUseCelsius} = useContext(UseCelsiusContext);
+
   const [stirring, setStirring] = useState(null);
   const [waterTemp, setWaterTemp] = useState(null);
   const [coffeeToWaterRatio, setCoffeeToWaterRatio] = useState(null);
@@ -147,6 +151,7 @@ const RecipesScreen = () => {
       );
     }
   }
+
   return (
     <React.Fragment>
       <StatusBar barStyle="light-content" />
