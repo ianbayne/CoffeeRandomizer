@@ -73,9 +73,15 @@ const RecipesScreen = () => {
 
   function heatWaterStep() {
     if (coffeeToWaterRatio !== null && waterTemp !== null) {
-      let convertedWaterTemp = useCelsius
-        ? `${waterTemp} °C`
-        : `${convertCelsiusToFahrenheit(waterTemp)} °F`;
+      let convertedWaterTemp;
+      if (typeof waterTemp === 'number') {
+        convertedWaterTemp = useCelsius
+          ? `${waterTemp} °C`
+          : `${convertCelsiusToFahrenheit(waterTemp)} °F`;
+      } else {
+        convertedWaterTemp = waterTemp;
+      }
+
       return (
         <View style={{flexDirection: 'row'}}>
           <Text style={({paddingRight: 5}, styles.steps)}>2. </Text>
