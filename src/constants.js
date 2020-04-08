@@ -6,12 +6,12 @@ export const STIRRING = [
   "Don't stir",
   'Your choice of how to stir',
 ];
-export const WATER_TEMPERATURE = [
-  '75 °C',
-  '80 °C',
-  '85 °C',
-  '90 °C',
-  '95 °C',
+export const WATER_TEMPERATURE_IN_CELSIUS = [
+  '75',
+  '80',
+  '85',
+  '90',
+  '95',
   'your choice',
 ];
 export const COFFEE_TO_WATER_RATIO = [

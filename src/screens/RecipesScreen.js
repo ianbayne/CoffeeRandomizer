@@ -12,14 +12,14 @@ import UseCelsiusContext from '../context/use-celsius-context';
 
 import {
   STIRRING,
-  WATER_TEMPERATURE,
+  WATER_TEMPERATURE_IN_CELSIUS,
   COFFEE_TO_WATER_RATIO,
   GRIND_AND_BREW_TIME,
   BLOOM_TIME_AND_INVERSION,
 } from '../constants';
 
 const RecipesScreen = () => {
-  const {useCelsius, setUseCelsius} = useContext(UseCelsiusContext);
+  const {useCelsius} = useContext(UseCelsiusContext);
 
   const [stirring, setStirring] = useState(null);
   const [waterTemp, setWaterTemp] = useState(null);
@@ -31,6 +31,10 @@ const RecipesScreen = () => {
     return items[Math.floor(Math.random() * items.length)];
   }
 
+  function convertCelsiusToFahrenheit(celsiusTemperature) {
+    return celsiusTemperature * 1.8 + 32;
+  }
+
   function onPress() {
     setStirring(null);
     setWaterTemp(null);
@@ -40,7 +44,7 @@ const RecipesScreen = () => {
 
     setTimeout(() => {
       setStirring(selectRandomItem(STIRRING));
-      setWaterTemp(selectRandomItem(WATER_TEMPERATURE));
+      setWaterTemp(selectRandomItem(WATER_TEMPERATURE_IN_CELSIUS));
       setCoffeeToWaterRatio(selectRandomItem(COFFEE_TO_WATER_RATIO));
       setGrindAndBrewTime(selectRandomItem(GRIND_AND_BREW_TIME));
       setBloomTimeAndInversion(selectRandomItem(BLOOM_TIME_AND_INVERSION));
@@ -69,6 +73,9 @@ const RecipesScreen = () => {
 
   function heatWaterStep() {
     if (coffeeToWaterRatio !== null && waterTemp !== null) {
+      let convertedWaterTemp = useCelsius
+        ? `${waterTemp} °C`
+        : `${convertCelsiusToFahrenheit(waterTemp)} °F`;
       return (
         <View style={{flexDirection: 'row'}}>
           <Text style={({paddingRight: 5}, styles.steps)}>2. </Text>
@@ -79,7 +86,7 @@ const RecipesScreen = () => {
               {coffeeToWaterRatio.water}{' '}
             </Text>
             of water to a temperature of
-            <Text style={{fontWeight: 'bold'}}> {waterTemp}</Text>.
+            <Text style={{fontWeight: 'bold'}}> {convertedWaterTemp}</Text>.
           </Text>
         </View>
       );
