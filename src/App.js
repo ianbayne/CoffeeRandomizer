@@ -1,19 +1,32 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import AsyncStorage from '@react-native-community/async-storage';
 
-import RecipesStackScreen from './src/screens/RecipesStackScreen';
-import SettingsStackScreen from './src/screens/SettingsStackScreen';
+import RecipesStackScreen from './screens/RecipesStackScreen';
+import SettingsStackScreen from './screens/SettingsStackScreen';
 
-import UseCelsiusContext from './src/context/use-celsius-context';
+import UseCelsiusContext from './context/use-celsius-context';
 
 const Tab = createBottomTabNavigator();
 
 const App: () => React$Node = () => {
   const [useCelsius, setUseCelsius] = useState(true);
-  const value = {useCelsius, setUseCelsius};
+  const setCelsius = useCelsius => {
+    AsyncStorage.setItem('celsius', JSON.stringify(useCelsius));
+    setUseCelsius(useCelsius);
+  };
+  const value = {useCelsius, setCelsius};
 
+  useEffect(() => {
+    (async () => {
+      const storedCelsius = await AsyncStorage.getItem('celsius');
+      if (storedCelsius) {
+        setUseCelsius(JSON.parse(storedCelsius));
+      }
+    })();
+  }, []);
   return (
     <UseCelsiusContext.Provider value={value}>
       <NavigationContainer>

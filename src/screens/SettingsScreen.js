@@ -4,7 +4,7 @@ import {Text, View, StyleSheet, Switch} from 'react-native';
 import UseCelsiusContext from '../context/use-celsius-context';
 
 const SettingsScreen = () => {
-  const {useCelsius, setUseCelsius} = useContext(UseCelsiusContext);
+  const {useCelsius, setCelsius} = useContext(UseCelsiusContext);
 
   const [test, setTest] = useState(false);
   function toggleTest(value) {
@@ -16,7 +16,7 @@ const SettingsScreen = () => {
       <View style={styles.switchRow}>
         <Text style={styles.switchText}>Use metric for temperatures</Text>
         <Switch
-          onValueChange={() => setUseCelsius(!useCelsius)}
+          onValueChange={() => setCelsius(!useCelsius)}
           value={useCelsius}
         />
       </View>
