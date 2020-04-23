@@ -36,7 +36,7 @@ const RecipesScreen = () => {
   }
 
   function convertGramsToOunces(grams) {
-    return (grams * 0.03527396195).toPrecision(2);
+    return (grams * 0.03527396195).toFixed(2);
   }
 
   function onPress() {
