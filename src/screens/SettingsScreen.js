@@ -1,15 +1,10 @@
 import React, {useState, useContext} from 'react';
 import {Text, View, StyleSheet, Switch} from 'react-native';
 
-import UseCelsiusContext from '../context/use-celsius-context';
+import UnitContext from '../context/unit-context';
 
 const SettingsScreen = () => {
-  const {useCelsius, setCelsius} = useContext(UseCelsiusContext);
-
-  const [test, setTest] = useState(false);
-  function toggleTest(value) {
-    setTest(value);
-  }
+  const {useCelsius, setCelsius, useGrams, setGrams} = useContext(UnitContext);
 
   return (
     <View style={styles.switchContainer}>
@@ -21,8 +16,8 @@ const SettingsScreen = () => {
         />
       </View>
       <View style={styles.switchRow}>
-        <Text style={styles.switchText}>Test test</Text>
-        <Switch onValueChange={toggleTest} value={test} />
+        <Text style={styles.switchText}>Use metric for weights</Text>
+        <Switch onValueChange={() => setGrams(!useGrams)} value={useGrams} />
       </View>
     </View>
   );

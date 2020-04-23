@@ -8,7 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-import UseCelsiusContext from '../context/use-celsius-context';
+import UnitContext from '../context/unit-context';
 
 import {
   STIRRING,
@@ -19,7 +19,7 @@ import {
 } from '../constants';
 
 const RecipesScreen = () => {
-  const {useCelsius} = useContext(UseCelsiusContext);
+  const {useCelsius, useGrams} = useContext(UnitContext);
 
   const [stirring, setStirring] = useState(null);
   const [waterTemp, setWaterTemp] = useState(null);
@@ -33,6 +33,10 @@ const RecipesScreen = () => {
 
   function convertCelsiusToFahrenheit(celsiusTemperature) {
     return celsiusTemperature * 1.8 + 32;
+  }
+
+  function convertGramsToOunces(grams) {
+    return (grams * 0.03527396195).toPrecision(2);
   }
 
   function onPress() {
@@ -53,15 +57,22 @@ const RecipesScreen = () => {
 
   function grindCoffeeStep() {
     if (coffeeToWaterRatio !== null && grindAndBrewTime !== null) {
+      const coffeeWeight = coffeeToWaterRatio.coffee;
+
+      let convertedCoffeeWeight;
+      if (typeof coffeeWeight === 'number') {
+        convertedCoffeeWeight = useGrams
+          ? `${coffeeWeight}g`
+          : `${convertGramsToOunces(coffeeWeight)} oz`;
+      } else {
+        convertedCoffeeWeight = coffeeWeight;
+      }
       return (
         <View style={{flexDirection: 'row'}}>
           <Text style={({paddingRight: 5}, styles.steps)}>1. </Text>
           <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
             Grind
-            <Text style={{fontWeight: 'bold'}}>
-              {' '}
-              {coffeeToWaterRatio.coffee}{' '}
-            </Text>
+            <Text style={{fontWeight: 'bold'}}> {convertedCoffeeWeight} </Text>
             of coffee to a
             <Text style={{fontWeight: 'bold'}}> {grindAndBrewTime.grind} </Text>
             consistency.
@@ -73,6 +84,8 @@ const RecipesScreen = () => {
 
   function heatWaterStep() {
     if (coffeeToWaterRatio !== null && waterTemp !== null) {
+      const waterWeight = coffeeToWaterRatio.water;
+
       let convertedWaterTemp;
       if (typeof waterTemp === 'number') {
         convertedWaterTemp = useCelsius
@@ -82,15 +95,20 @@ const RecipesScreen = () => {
         convertedWaterTemp = waterTemp;
       }
 
+      let convertedWaterWeight;
+      if (typeof waterWeight === 'number') {
+        convertedWaterWeight = useGrams
+          ? `${waterWeight}g`
+          : `${convertGramsToOunces(waterWeight)} oz`;
+      } else {
+        convertedWaterWeight = waterWeight;
+      }
       return (
         <View style={{flexDirection: 'row'}}>
           <Text style={({paddingRight: 5}, styles.steps)}>2. </Text>
           <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
             Heat
-            <Text style={{fontWeight: 'bold'}}>
-              {' '}
-              {coffeeToWaterRatio.water}{' '}
-            </Text>
+            <Text style={{fontWeight: 'bold'}}> {convertedWaterWeight} </Text>
             of water to a temperature of
             <Text style={{fontWeight: 'bold'}}> {convertedWaterTemp}</Text>.
           </Text>

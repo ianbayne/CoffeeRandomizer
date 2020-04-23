@@ -7,17 +7,24 @@ import AsyncStorage from '@react-native-community/async-storage';
 import RecipesStackScreen from './screens/RecipesStackScreen';
 import SettingsStackScreen from './screens/SettingsStackScreen';
 
-import UseCelsiusContext from './context/use-celsius-context';
+import UnitContext from './context/unit-context';
 
 const Tab = createBottomTabNavigator();
 
 const App: () => React$Node = () => {
   const [useCelsius, setUseCelsius] = useState(true);
+  const [useGrams, setUseGrams] = useState(true);
+
   const setCelsius = useCelsius => {
     AsyncStorage.setItem('celsius', JSON.stringify(useCelsius));
     setUseCelsius(useCelsius);
   };
-  const value = {useCelsius, setCelsius};
+  const setGrams = useGrams => {
+    AsyncStorage.setItem('grams', JSON.stringify(useGrams));
+    setUseGrams(useGrams);
+  };
+
+  const value = {useCelsius, setCelsius, useGrams, setGrams};
 
   useEffect(() => {
     (async () => {
@@ -25,10 +32,15 @@ const App: () => React$Node = () => {
       if (storedCelsius) {
         setUseCelsius(JSON.parse(storedCelsius));
       }
+      const storedGrams = await AsyncStorage.getItem('grams');
+      if (storedGrams) {
+        setUseGrams(JSON.parse(storedGrams));
+      }
     })();
   }, []);
+
   return (
-    <UseCelsiusContext.Provider value={value}>
+    <UnitContext.Provider value={value}>
       <NavigationContainer>
         <Tab.Navigator
           initialRouteName="Recipes"
@@ -54,7 +66,7 @@ const App: () => React$Node = () => {
           <Tab.Screen name="Settings" component={SettingsStackScreen} />
         </Tab.Navigator>
       </NavigationContainer>
-    </UseCelsiusContext.Provider>
+    </UnitContext.Provider>
   );
 };
 

@@ -8,11 +8,11 @@ export const STIRRING = [
 ];
 export const WATER_TEMPERATURE_IN_CELSIUS = [75, 80, 85, 90, 95, 'your choice'];
 export const COFFEE_TO_WATER_RATIO = [
-  {coffee: '12g', water: '200g'},
-  {coffee: '15g', water: '200g'},
-  {coffee: '15g', water: '250g'},
-  {coffee: '24g', water: '200g', diluteToShare: true},
-  {coffee: '30g', water: '200g', diluteToShare: true},
+  {coffee: 12, water: 200},
+  {coffee: 15, water: 200},
+  {coffee: 15, water: 250},
+  {coffee: 24, water: 200, diluteToShare: true},
+  {coffee: 30, water: 200, diluteToShare: true},
   {coffee: 'your choice', water: 'your choice'},
 ];
 export const GRIND_AND_BREW_TIME = [
