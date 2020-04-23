@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* AeropressProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AeropressProjectTests.m */; };
+		055F7E251A653468EC382ED3 /* libPods-AeropressProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E0ADC5EE40A200367CBC4D /* libPods-AeropressProject-tvOSTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -16,10 +17,9 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* AeropressProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AeropressProjectTests.m */; };
-		3F2407F8FB2E9EA078BF9BCB /* libPods-AeropressProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA58A2E22EB731121418C76A /* libPods-AeropressProject-tvOS.a */; };
-		401D143805A895523621F09A /* libPods-AeropressProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EABF177384A04356A52F356 /* libPods-AeropressProjectTests.a */; };
-		523FC45B25301A85FAD69482 /* libPods-AeropressProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 609E90EFF6F65BB3886D9152 /* libPods-AeropressProject-tvOSTests.a */; };
-		FC6EEAB62F75D6691ADC3EFA /* libPods-AeropressProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEC2C4C45F1780CCB7AA4F7 /* libPods-AeropressProject.a */; };
+		5B36D400514E92FA3152BB3D /* libPods-AeropressProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B32E412D366424664A992 /* libPods-AeropressProject.a */; };
+		6DB289B1220CCF656F573DE5 /* libPods-AeropressProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3CC45CB167A45F295CE040 /* libPods-AeropressProject-tvOS.a */; };
+		D9D4B8EC06BB087B768F3BC4 /* libPods-AeropressProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F5B5D3F487C4DD9BD1A1C9 /* libPods-AeropressProjectTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,8 @@
 		00E356EE1AD99517003FC87E /* AeropressProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeropressProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AeropressProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AeropressProjectTests.m; sourceTree = "<group>"; };
-		0ED7B8782A227E93F29CDC65 /* Pods-AeropressProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProject/Pods-AeropressProject.debug.xcconfig"; sourceTree = "<group>"; };
-		11135A5A18FAD871A51F562A /* Pods-AeropressProject-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOSTests/Pods-AeropressProject-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		0226E76864F48DD088659250 /* Pods-AeropressProject-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOSTests/Pods-AeropressProject-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0500062B7AB7DD41F18C5A03 /* Pods-AeropressProject-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOS.release.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOS/Pods-AeropressProject-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AeropressProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeropressProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AeropressProject/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AeropressProject/AppDelegate.m; sourceTree = "<group>"; };
@@ -53,20 +53,20 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AeropressProject/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AeropressProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AeropressProject/main.m; sourceTree = "<group>"; };
-		19B573D2001FD11BC5C33B82 /* Pods-AeropressProject-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOS.release.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOS/Pods-AeropressProject-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		1DEC2C4C45F1780CCB7AA4F7 /* libPods-AeropressProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* AeropressProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AeropressProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* AeropressProject-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AeropressProject-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3314A3A44294A07AD4F2FEA7 /* Pods-AeropressProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProjectTests/Pods-AeropressProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		55C4E0BD82D4D0627E5BC958 /* Pods-AeropressProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProjectTests.release.xcconfig"; path = "Target Support Files/Pods-AeropressProjectTests/Pods-AeropressProjectTests.release.xcconfig"; sourceTree = "<group>"; };
-		5EABF177384A04356A52F356 /* libPods-AeropressProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		609E90EFF6F65BB3886D9152 /* libPods-AeropressProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D9889EAE21C833B92C6EE97 /* Pods-AeropressProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject.release.xcconfig"; path = "Target Support Files/Pods-AeropressProject/Pods-AeropressProject.release.xcconfig"; sourceTree = "<group>"; };
-		C4D3F9D69568ABED2E7CAF83 /* Pods-AeropressProject-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOSTests/Pods-AeropressProject-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DA58A2E22EB731121418C76A /* libPods-AeropressProject-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProject-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E962C34A04BEACEDD9EEBA4D /* Pods-AeropressProject-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOS/Pods-AeropressProject-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2D2E751C6487B50E01C06614 /* Pods-AeropressProject-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOS/Pods-AeropressProject-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		43A33556542D1F2DE9FF8548 /* Pods-AeropressProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProject/Pods-AeropressProject.debug.xcconfig"; sourceTree = "<group>"; };
+		641B32E412D366424664A992 /* libPods-AeropressProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3E0ADC5EE40A200367CBC4D /* libPods-AeropressProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B04E11F857AA098DC5538BDA /* Pods-AeropressProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject.release.xcconfig"; path = "Target Support Files/Pods-AeropressProject/Pods-AeropressProject.release.xcconfig"; sourceTree = "<group>"; };
+		D34BB6884DEB2D3B89C159CA /* Pods-AeropressProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProjectTests/Pods-AeropressProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4F5B5D3F487C4DD9BD1A1C9 /* libPods-AeropressProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D921195650E2660F08232951 /* Pods-AeropressProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProjectTests.release.xcconfig"; path = "Target Support Files/Pods-AeropressProjectTests/Pods-AeropressProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA3CC45CB167A45F295CE040 /* libPods-AeropressProject-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProject-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F9C8185A2921AF559297B255 /* Pods-AeropressProject-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOSTests/Pods-AeropressProject-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				401D143805A895523621F09A /* libPods-AeropressProjectTests.a in Frameworks */,
+				D9D4B8EC06BB087B768F3BC4 /* libPods-AeropressProjectTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6EEAB62F75D6691ADC3EFA /* libPods-AeropressProject.a in Frameworks */,
+				5B36D400514E92FA3152BB3D /* libPods-AeropressProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F2407F8FB2E9EA078BF9BCB /* libPods-AeropressProject-tvOS.a in Frameworks */,
+				6DB289B1220CCF656F573DE5 /* libPods-AeropressProject-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				523FC45B25301A85FAD69482 /* libPods-AeropressProject-tvOSTests.a in Frameworks */,
+				055F7E251A653468EC382ED3 /* libPods-AeropressProject-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,12 +141,28 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				1DEC2C4C45F1780CCB7AA4F7 /* libPods-AeropressProject.a */,
-				DA58A2E22EB731121418C76A /* libPods-AeropressProject-tvOS.a */,
-				609E90EFF6F65BB3886D9152 /* libPods-AeropressProject-tvOSTests.a */,
-				5EABF177384A04356A52F356 /* libPods-AeropressProjectTests.a */,
+				641B32E412D366424664A992 /* libPods-AeropressProject.a */,
+				EA3CC45CB167A45F295CE040 /* libPods-AeropressProject-tvOS.a */,
+				A3E0ADC5EE40A200367CBC4D /* libPods-AeropressProject-tvOSTests.a */,
+				D4F5B5D3F487C4DD9BD1A1C9 /* libPods-AeropressProjectTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		635389D1D777EA127DC509DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43A33556542D1F2DE9FF8548 /* Pods-AeropressProject.debug.xcconfig */,
+				B04E11F857AA098DC5538BDA /* Pods-AeropressProject.release.xcconfig */,
+				2D2E751C6487B50E01C06614 /* Pods-AeropressProject-tvOS.debug.xcconfig */,
+				0500062B7AB7DD41F18C5A03 /* Pods-AeropressProject-tvOS.release.xcconfig */,
+				0226E76864F48DD088659250 /* Pods-AeropressProject-tvOSTests.debug.xcconfig */,
+				F9C8185A2921AF559297B255 /* Pods-AeropressProject-tvOSTests.release.xcconfig */,
+				D34BB6884DEB2D3B89C159CA /* Pods-AeropressProjectTests.debug.xcconfig */,
+				D921195650E2660F08232951 /* Pods-AeropressProjectTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -164,7 +180,7 @@
 				00E356EF1AD99517003FC87E /* AeropressProjectTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				CD8BFC2FD339A18A4DE71B4A /* Pods */,
+				635389D1D777EA127DC509DC /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -182,22 +198,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CD8BFC2FD339A18A4DE71B4A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0ED7B8782A227E93F29CDC65 /* Pods-AeropressProject.debug.xcconfig */,
-				8D9889EAE21C833B92C6EE97 /* Pods-AeropressProject.release.xcconfig */,
-				E962C34A04BEACEDD9EEBA4D /* Pods-AeropressProject-tvOS.debug.xcconfig */,
-				19B573D2001FD11BC5C33B82 /* Pods-AeropressProject-tvOS.release.xcconfig */,
-				C4D3F9D69568ABED2E7CAF83 /* Pods-AeropressProject-tvOSTests.debug.xcconfig */,
-				11135A5A18FAD871A51F562A /* Pods-AeropressProject-tvOSTests.release.xcconfig */,
-				3314A3A44294A07AD4F2FEA7 /* Pods-AeropressProjectTests.debug.xcconfig */,
-				55C4E0BD82D4D0627E5BC958 /* Pods-AeropressProjectTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,7 +205,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AeropressProjectTests" */;
 			buildPhases = (
-				5C5078B13EFCEE0F97564614 /* [CP] Check Pods Manifest.lock */,
+				AB94112F55926E2E6AB820AF /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -224,7 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AeropressProject" */;
 			buildPhases = (
-				D01B2015B63177EAB1360126 /* [CP] Check Pods Manifest.lock */,
+				0E434A9A4EEA959B0A8ABA2A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -244,7 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AeropressProject-tvOS" */;
 			buildPhases = (
-				43388396C0394277622CFDB6 /* [CP] Check Pods Manifest.lock */,
+				76B24CEDA96448C2587E2A0A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -264,7 +264,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AeropressProject-tvOSTests" */;
 			buildPhases = (
-				1581F549E5BEFB7B59812E5A /* [CP] Check Pods Manifest.lock */,
+				3475484A662AB18A1D3E0A4E /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -373,7 +373,43 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		1581F549E5BEFB7B59812E5A /* [CP] Check Pods Manifest.lock */ = {
+		0E434A9A4EEA959B0A8ABA2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AeropressProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		3475484A662AB18A1D3E0A4E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -395,21 +431,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		43388396C0394277622CFDB6 /* [CP] Check Pods Manifest.lock */ = {
+		76B24CEDA96448C2587E2A0A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,7 +453,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C5078B13EFCEE0F97564614 /* [CP] Check Pods Manifest.lock */ = {
+		AB94112F55926E2E6AB820AF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -447,28 +469,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AeropressProjectTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D01B2015B63177EAB1360126 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AeropressProject-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -580,7 +580,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3314A3A44294A07AD4F2FEA7 /* Pods-AeropressProjectTests.debug.xcconfig */;
+			baseConfigurationReference = D34BB6884DEB2D3B89C159CA /* Pods-AeropressProjectTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -603,7 +603,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55C4E0BD82D4D0627E5BC958 /* Pods-AeropressProjectTests.release.xcconfig */;
+			baseConfigurationReference = D921195650E2660F08232951 /* Pods-AeropressProjectTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -623,7 +623,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0ED7B8782A227E93F29CDC65 /* Pods-AeropressProject.debug.xcconfig */;
+			baseConfigurationReference = 43A33556542D1F2DE9FF8548 /* Pods-AeropressProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -643,7 +643,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D9889EAE21C833B92C6EE97 /* Pods-AeropressProject.release.xcconfig */;
+			baseConfigurationReference = B04E11F857AA098DC5538BDA /* Pods-AeropressProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -662,7 +662,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E962C34A04BEACEDD9EEBA4D /* Pods-AeropressProject-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 2D2E751C6487B50E01C06614 /* Pods-AeropressProject-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -690,7 +690,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19B573D2001FD11BC5C33B82 /* Pods-AeropressProject-tvOS.release.xcconfig */;
+			baseConfigurationReference = 0500062B7AB7DD41F18C5A03 /* Pods-AeropressProject-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -718,7 +718,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4D3F9D69568ABED2E7CAF83 /* Pods-AeropressProject-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 0226E76864F48DD088659250 /* Pods-AeropressProject-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -745,7 +745,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11135A5A18FAD871A51F562A /* Pods-AeropressProject-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = F9C8185A2921AF559297B255 /* Pods-AeropressProject-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
