@@ -7,23 +7,29 @@ const SettingsScreen = () => {
   const {useCelsius, setCelsius, useGrams, setGrams} = useContext(UnitContext);
 
   return (
-    <View style={styles.switchContainer}>
-      <View style={styles.switchRow}>
-        <Text style={styles.switchText}>Use metric for temperatures</Text>
-        <Switch
-          onValueChange={() => setCelsius(!useCelsius)}
-          value={useCelsius}
-        />
-      </View>
-      <View style={styles.switchRow}>
-        <Text style={styles.switchText}>Use metric for weights</Text>
-        <Switch onValueChange={() => setGrams(!useGrams)} value={useGrams} />
+    <View style={styles.container}>
+      <View style={styles.switchContainer}>
+        <View style={styles.switchRow}>
+          <Text style={styles.switchText}>Use metric for temperatures</Text>
+          <Switch
+            onValueChange={() => setCelsius(!useCelsius)}
+            value={useCelsius}
+          />
+        </View>
+        <View style={styles.switchRow}>
+          <Text style={styles.switchText}>Use metric for weights</Text>
+          <Switch onValueChange={() => setGrams(!useGrams)} value={useGrams} />
+        </View>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#fff',
+    height: '100%',
+  },
   switchContainer: {
     marginTop: 100,
     paddingHorizontal: 30,
