@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import {
+  ActivityIndicator,
   TouchableHighlight,
   StyleSheet,
   ScrollView,
@@ -27,6 +28,8 @@ const RecipesScreen = () => {
   const [grindAndBrewTime, setGrindAndBrewTime] = useState(null);
   const [bloomTimeAndInversion, setBloomTimeAndInversion] = useState(null);
 
+  const [loading, setLoading] = useState(false);
+
   function selectRandomItem(items) {
     return items[Math.floor(Math.random() * items.length)];
   }
@@ -45,6 +48,7 @@ const RecipesScreen = () => {
     setCoffeeToWaterRatio(null);
     setGrindAndBrewTime(null);
     setBloomTimeAndInversion(null);
+    setLoading(true);
 
     setTimeout(() => {
       setStirring(selectRandomItem(STIRRING));
@@ -52,7 +56,8 @@ const RecipesScreen = () => {
       setCoffeeToWaterRatio(selectRandomItem(COFFEE_TO_WATER_RATIO));
       setGrindAndBrewTime(selectRandomItem(GRIND_AND_BREW_TIME));
       setBloomTimeAndInversion(selectRandomItem(BLOOM_TIME_AND_INVERSION));
-    }, 200);
+      setLoading(false);
+    }, 400);
   }
 
   function grindCoffeeStep() {
@@ -197,6 +202,15 @@ const RecipesScreen = () => {
               <Text style={styles.buttonText}>Randomize</Text>
             </TouchableHighlight>
           </View>
+          {loading && (
+            <View style={styles.activityIndicator}>
+              <ActivityIndicator
+                animating={loading}
+                size="large"
+                color="#0000ff"
+              />
+            </View>
+          )}
           <View>{grindCoffeeStep()}</View>
           <View>{heatWaterStep()}</View>
           <View>{orientationStep()}</View>
@@ -228,6 +242,11 @@ const RecipesScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  activityIndicator: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 125,
+  },
   button: {
     paddingHorizontal: 10,
     paddingVertical: 15,
