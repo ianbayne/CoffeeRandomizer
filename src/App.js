@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import {Text} from 'react-native';
+import {Platform} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AsyncStorage from '@react-native-community/async-storage';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import RecipesStackScreen from './screens/RecipesStackScreen';
 import SettingsStackScreen from './screens/SettingsStackScreen';
@@ -50,24 +50,21 @@ const App: () => React$Node = () => {
               let iconName;
 
               if (route.name === 'Recipes') {
-                iconName = 'home';
+                Platform.OS === 'ios'
+                  ? (iconName = 'ios-home')
+                  : (iconName = 'md-home');
               } else if (route.name === 'Settings') {
-                iconName = 'settings';
+                Platform.OS === 'ios'
+                  ? (iconName = 'ios-settings')
+                  : (iconName = 'md-settings');
               }
 
-              return (
-                <MaterialCommunityIcons
-                  name={iconName}
-                  size={size}
-                  color={color}
-                />
-              );
+              return <Ionicons name={iconName} size={size} color={color} />;
             },
           })}
           tabBarOptions={{
             activeTintColor: 'tomato',
             inactiveTintColor: 'gray',
-            showLabel: false,
           }}>
           <Tab.Screen name="Recipes" component={RecipesStackScreen} />
           <Tab.Screen name="Settings" component={SettingsStackScreen} />
