@@ -3,6 +3,7 @@ import {Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AsyncStorage from '@react-native-community/async-storage';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import RecipesStackScreen from './screens/RecipesStackScreen';
 import SettingsStackScreen from './screens/SettingsStackScreen';
@@ -45,16 +46,22 @@ const App: () => React$Node = () => {
         <Tab.Navigator
           initialRouteName="Recipes"
           screenOptions={({route}) => ({
-            tabBarIcon: ({focused, color, size}) => {
-              let text;
+            tabBarIcon: ({_, color, size}) => {
+              let iconName;
 
               if (route.name === 'Recipes') {
-                text = 'Recipes';
+                iconName = 'home';
               } else if (route.name === 'Settings') {
-                text = 'Settings';
+                iconName = 'settings';
               }
 
-              return <Text style={{color: color}}>{text}</Text>;
+              return (
+                <MaterialCommunityIcons
+                  name={iconName}
+                  size={size}
+                  color={color}
+                />
+              );
             },
           })}
           tabBarOptions={{
