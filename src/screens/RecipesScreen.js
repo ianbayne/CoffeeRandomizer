@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
     borderColor: '#ddd',
     borderRadius: 15,
     width: 225,
-    backgroundColor: '#eee',
+    backgroundColor: '#ff9900',
     marginTop: 30,
     marginBottom: 40,
     shadowColor: '#000',
@@ -270,7 +270,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
     textAlign: 'center',
-    color: '#555',
+    color: '#fff',
   },
   buttonContainer: {
     flex: 1,
@@ -278,12 +278,12 @@ const styles = StyleSheet.create({
     marginTop: 25,
   },
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: '#f9f9f9',
   },
   mainContent: {
     paddingHorizontal: 30,
     paddingBottom: 30,
-    backgroundColor: '#fff',
+    backgroundColor: '#f9f9f9',
   },
   steps: {
     fontSize: 20,

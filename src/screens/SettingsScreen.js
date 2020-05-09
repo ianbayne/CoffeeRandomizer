@@ -27,7 +27,7 @@ const SettingsScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: '#f9f9f9',
     height: '100%',
   },
   switchContainer: {
