@@ -43,24 +43,32 @@ const RecipesScreen = () => {
   }
 
   function onPress() {
+    setStatesToNull();
+    setLoading(true);
+
+    setTimeout(() => {
+      renderRecipe();
+      setLoading(false);
+    }, 400);
+  }
+
+  function setStatesToNull() {
     setStirring(null);
     setWaterTemp(null);
     setCoffeeToWaterRatio(null);
     setGrindAndBrewTime(null);
     setBloomTimeAndInversion(null);
-    setLoading(true);
-
-    setTimeout(() => {
-      setStirring(selectRandomItem(STIRRING));
-      setWaterTemp(selectRandomItem(WATER_TEMPERATURE_IN_CELSIUS));
-      setCoffeeToWaterRatio(selectRandomItem(COFFEE_TO_WATER_RATIO));
-      setGrindAndBrewTime(selectRandomItem(GRIND_AND_BREW_TIME));
-      setBloomTimeAndInversion(selectRandomItem(BLOOM_TIME_AND_INVERSION));
-      setLoading(false);
-    }, 400);
   }
 
-  function grindCoffeeStep() {
+  function renderRecipe() {
+    setStirring(selectRandomItem(STIRRING));
+    setWaterTemp(selectRandomItem(WATER_TEMPERATURE_IN_CELSIUS));
+    setCoffeeToWaterRatio(selectRandomItem(COFFEE_TO_WATER_RATIO));
+    setGrindAndBrewTime(selectRandomItem(GRIND_AND_BREW_TIME));
+    setBloomTimeAndInversion(selectRandomItem(BLOOM_TIME_AND_INVERSION));
+  }
+
+  function renderGrindCoffeeStep() {
     if (coffeeToWaterRatio !== null && grindAndBrewTime !== null) {
       const coffeeWeight = coffeeToWaterRatio.coffee;
 
@@ -87,7 +95,7 @@ const RecipesScreen = () => {
     }
   }
 
-  function heatWaterStep() {
+  function renderHeatWaterStep() {
     if (coffeeToWaterRatio !== null && waterTemp !== null) {
       const waterWeight = coffeeToWaterRatio.water;
 
@@ -122,7 +130,7 @@ const RecipesScreen = () => {
     }
   }
 
-  function orientationStep() {
+  function renderOrientationStep() {
     if (bloomTimeAndInversion !== null) {
       return (
         <View style={{flexDirection: 'row'}}>
@@ -140,7 +148,7 @@ const RecipesScreen = () => {
     }
   }
 
-  function bloomStep() {
+  function renderBloomStep() {
     if (bloomTimeAndInversion !== null && bloomTimeAndInversion.bloom) {
       return (
         <View style={{flexDirection: 'row'}}>
@@ -161,7 +169,7 @@ const RecipesScreen = () => {
     }
   }
 
-  function brewStep() {
+  function renderBrewStep() {
     if (grindAndBrewTime !== null) {
       return (
         <View style={{flexDirection: 'row'}}>
@@ -175,7 +183,7 @@ const RecipesScreen = () => {
     }
   }
 
-  function stirStep() {
+  function renderStirStep() {
     if (stirring !== null) {
       return (
         <View style={{flexDirection: 'row'}}>
@@ -211,14 +219,14 @@ const RecipesScreen = () => {
               />
             </View>
           )}
-          <View>{grindCoffeeStep()}</View>
-          <View>{heatWaterStep()}</View>
-          <View>{orientationStep()}</View>
+          <View>{renderGrindCoffeeStep()}</View>
+          <View>{renderHeatWaterStep()}</View>
+          <View>{renderOrientationStep()}</View>
           {bloomTimeAndInversion !== null && bloomTimeAndInversion.bloom && (
-            <View>{bloomStep()}</View>
+            <View>{renderBloomStep()}</View>
           )}
-          <View>{brewStep()}</View>
-          <View>{stirStep()}</View>
+          <View>{renderBrewStep()}</View>
+          <View>{renderStirStep()}</View>
           {stirring !== null && (
             <View style={{flexDirection: 'row'}}>
               <Text style={({paddingRight: 5}, styles.steps)}>7. </Text>
