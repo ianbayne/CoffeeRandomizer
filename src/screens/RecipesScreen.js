@@ -230,7 +230,7 @@ const RecipesScreen = () => {
               activeOpacity={0.6}
               underlayColor="#ddd"
               onPress={onPress}>
-              <Text style={styles.buttonText}>Randomize</Text>
+              <Text style={styles.buttonText}>New Recipe</Text>
             </TouchableHighlight>
           </View>
           {loading && (
