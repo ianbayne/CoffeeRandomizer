@@ -7,6 +7,8 @@ import {
   Text,
   View,
   StatusBar,
+  Image,
+  Dimensions,
 } from 'react-native';
 
 import UnitContext from '../context/unit-context';
@@ -18,6 +20,8 @@ import {
   GRIND_AND_BREW_TIME,
   BLOOM_TIME_AND_INVERSION,
 } from '../constants';
+
+const {height} = Dimensions.get('window');
 
 const RecipesScreen = () => {
   const {useCelsius, useGrams} = useContext(UnitContext);
@@ -201,6 +205,25 @@ const RecipesScreen = () => {
       <StatusBar barStyle="light-content" />
       <ScrollView style={styles.container}>
         <View style={styles.mainContent}>
+          <View
+            style={{
+              position: 'absolute',
+              height: height / 2 + 80,
+              width: '100%',
+              left: 5,
+            }}>
+            <Image
+              style={{
+                position: 'relative',
+                left: '50%',
+                top: '50%',
+                height: 100,
+                width: 48,
+              }}
+              opacity={0.2}
+              source={require('../assets/images/aeropress.png')}
+            />
+          </View>
           <View style={styles.buttonContainer}>
             <TouchableHighlight
               style={styles.button}
@@ -219,6 +242,7 @@ const RecipesScreen = () => {
               />
             </View>
           )}
+
           <View>{renderGrindCoffeeStep()}</View>
           <View>{renderHeatWaterStep()}</View>
           <View>{renderOrientationStep()}</View>
@@ -286,6 +310,8 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: '#f9f9f9',
+    width: '100%',
+    height: '100%',
   },
   mainContent: {
     paddingHorizontal: 30,
