@@ -51,8 +51,8 @@ const App: () => React$Node = () => {
 
               if (route.name === 'Recipes') {
                 Platform.OS === 'ios'
-                  ? (iconName = 'ios-home')
-                  : (iconName = 'md-home');
+                  ? (iconName = 'ios-list')
+                  : (iconName = 'md-list');
               } else if (route.name === 'Settings') {
                 Platform.OS === 'ios'
                   ? (iconName = 'ios-settings')
