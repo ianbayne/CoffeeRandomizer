@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   },
   unitsSelectionOuterContainer: {
     marginTop: 20,
-    marginBottom: 40,
+    marginBottom: 50,
   },
   unitsSelectionInnerContainer: {
     paddingLeft: 15,
