@@ -4,17 +4,37 @@ import {WebView} from 'react-native-webview';
 
 const FeedbackScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const FORM_URI =
+    'https://docs.google.com/forms/d/e/1FAIpQLSfezWSiaL5r0zau9iCVie9K4G3tIemrhbQPEi61tlk7OUHd_g/viewform?usp=sf_link';
+  const INJECTED_JAVASCRIPT =
+    "document.getElementsByClassName('freebirdFormviewerViewNavigationPasswordWarning')[0].remove();" +
+    "document.getElementsByClassName('freebirdFormviewerViewFooterDisclaimer')[0].parentElement.remove();" +
+    "document.getElementsByClassName('freebirdFormviewerViewFeedbackSubmitFeedbackButton')[0].remove();" +
+    "document.getElementsByClassName('freebirdThemedFilledButtonM2')[0].style.backgroundColor = '#ff9900';" +
+    true;
+
+  function handleOnLoad() {
+    setIsLoading(false);
+    this.webref.injectJavaScript(INJECTED_JAVASCRIPT);
+  }
 
   return (
     <View style={styles.container}>
-      <ActivityIndicator
-        animating={isLoading}
-        size="large"
-        style={styles.activityIndicator}
-      />
+      {isLoading && (
+        <ActivityIndicator
+          animating={isLoading}
+          size="large"
+          style={styles.activityIndicator}
+        />
+      )}
       <WebView
-        onLoad={() => setIsLoading(false)}
-        source={{uri: 'https://infinite.red'}}
+        onLoad={() => handleOnLoad()}
+        source={{
+          uri: FORM_URI,
+        }}
+        ref={ref => (this.webref = ref)}
+        scalesPageToFit={false}
+        javaScriptEnabled={true}
       />
     </View>
   );
