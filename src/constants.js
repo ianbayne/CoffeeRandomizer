@@ -13,7 +13,7 @@ export const COFFEE_TO_WATER_RATIO = [
   {coffee: 15, water: 250},
   {coffee: 24, water: 200, diluteToShare: true},
   {coffee: 30, water: 200, diluteToShare: true},
-  {coffee: 'your choice', water: 'your choice'},
+  {coffee: 'your desired amount', water: 'your desired amount'},
 ];
 export const GRIND_AND_BREW_TIME = [
   {grind: 'very fine', time: '30s'},
@@ -21,7 +21,7 @@ export const GRIND_AND_BREW_TIME = [
   {grind: 'medium fine', time: '90s'},
   {grind: 'medium', time: '120s'},
   {grind: 'coarse', time: '4min'},
-  {grind: 'your choice', time: 'your choice'},
+  {grind: 'your desired', time: 'your desired length of time'},
 ];
 export const BLOOM_TIME_AND_INVERSION = [
   {orientation: 'standard', bloom: false},

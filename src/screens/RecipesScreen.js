@@ -90,8 +90,8 @@ const RecipesScreen = () => {
           <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
             Grind
             <Text style={{fontWeight: 'bold'}}> {convertedCoffeeWeight} </Text>
-            of coffee to a
-            <Text style={{fontWeight: 'bold'}}> {grindAndBrewTime.grind} </Text>
+            of coffee to {grindAndBrewTime.grind !== 'your desired' && 'a '}
+            <Text style={{fontWeight: 'bold'}}>{grindAndBrewTime.grind} </Text>
             consistency.
           </Text>
         </View>
