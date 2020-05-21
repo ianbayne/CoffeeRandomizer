@@ -32,7 +32,7 @@ const RecipesScreen = () => {
   const [grindAndBrewTime, setGrindAndBrewTime] = useState(null);
   const [bloomTimeAndInversion, setBloomTimeAndInversion] = useState(null);
 
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   function selectRandomItem(items) {
     return items[Math.floor(Math.random() * items.length)];
@@ -48,11 +48,11 @@ const RecipesScreen = () => {
 
   function onPress() {
     setStatesToNull();
-    setLoading(true);
+    setIsLoading(true);
 
     setTimeout(() => {
       renderRecipe();
-      setLoading(false);
+      setIsLoading(false);
     }, 400);
   }
 
