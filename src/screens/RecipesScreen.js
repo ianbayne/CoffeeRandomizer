@@ -249,12 +249,12 @@ const RecipesScreen = () => {
             </View>
           )}
 
-          <View>{renderGrindCoffeeStep()}</View>
-          <View>{renderHeatWaterStep()}</View>
-          <View>{renderOrientationStep()}</View>
-          <View>{renderBrewStep()}</View>
-          <View>{renderStirStep()}</View>
-          {bloomTimeAndInversion?.bloom && <View>{renderBloomStep()}</View>}
+          {renderGrindCoffeeStep()}
+          {renderHeatWaterStep()}
+          {renderOrientationStep()}
+          {renderBloomStep()}
+          {renderBrewStep()}
+          {renderStirStep()}
           {stirring && (
             <View style={{flexDirection: 'row'}}>
               <Text style={({paddingRight: 5}, styles.steps)}>{`7. `}</Text>
