@@ -13,9 +13,11 @@ const FeedbackScreen = () => {
     "document.getElementsByClassName('freebirdThemedFilledButtonM2')[0].style.backgroundColor = '#ff9900';" +
     true;
 
+  let webref;
+
   function handleOnLoad() {
     setIsLoading(false);
-    this.webref.injectJavaScript(INJECTED_JAVASCRIPT);
+    webref.injectJavaScript(INJECTED_JAVASCRIPT);
   }
 
   return (
@@ -32,7 +34,7 @@ const FeedbackScreen = () => {
         source={{
           uri: FORM_URI,
         }}
-        ref={ref => (this.webref = ref)}
+        ref={ref => (webref = ref)}
         scalesPageToFit={false}
         javaScriptEnabled={true}
       />
