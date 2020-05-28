@@ -50,13 +50,15 @@ const App: () => React$Node = () => {
               let iconName;
 
               if (route.name === 'Recipes') {
-                Platform.OS === 'ios'
-                  ? (iconName = 'ios-list')
-                  : (iconName = 'md-list');
+                iconName = Platform.select({
+                  ios: 'ios-list',
+                  android: 'md-list',
+                });
               } else if (route.name === 'Settings') {
-                Platform.OS === 'ios'
-                  ? (iconName = 'ios-settings')
-                  : (iconName = 'md-settings');
+                iconName = Platform.select({
+                  ios: 'ios-settings',
+                  android: 'md-settings',
+                });
               }
 
               return <Ionicons name={iconName} size={size} color={color} />;
