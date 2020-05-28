@@ -47,7 +47,7 @@ const RecipesScreen = () => {
   }
 
   function onPress() {
-    setStatesToNull();
+    setBrewingStatesToNull();
     setIsLoading(true);
 
     setTimeout(() => {
@@ -56,7 +56,7 @@ const RecipesScreen = () => {
     }, 400);
   }
 
-  function setStatesToNull() {
+  function setBrewingStatesToNull() {
     setStirring(null);
     setWaterTemp(null);
     setCoffeeToWaterRatio(null);
