@@ -10,9 +10,9 @@ import {
 } from 'react-native';
 import {WebView} from 'react-native-webview';
 
-const CreditsScreen = () => {
-  const URL = 'https://aero.press/products/brew-recipe-dice';
+const URL = 'https://aero.press/products/brew-recipe-dice';
 
+const CreditsScreen = () => {
   return (
     <ScrollView style={{backgroundColor: '#f9f9f9', flex: 1}}>
       <View style={styles.content}>
