@@ -86,12 +86,14 @@ const RecipesScreen = () => {
       }
       return (
         <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>1. </Text>
+          <Text style={({paddingRight: 5}, styles.steps)}>{`1. `}</Text>
           <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
             Grind
-            <Text style={{fontWeight: 'bold'}}> {convertedCoffeeWeight} </Text>
+            <Text
+              style={{fontWeight: 'bold'}}>{` ${convertedCoffeeWeight} `}</Text>
             of coffee to {grindAndBrewTime.grind !== 'your desired' && 'a '}
-            <Text style={{fontWeight: 'bold'}}>{grindAndBrewTime.grind} </Text>
+            <Text
+              style={{fontWeight: 'bold'}}>{`${grindAndBrewTime.grind} `}</Text>
             consistency.
           </Text>
         </View>
@@ -122,12 +124,14 @@ const RecipesScreen = () => {
       }
       return (
         <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>2. </Text>
+          <Text style={({paddingRight: 5}, styles.steps)}>{`2. `}</Text>
           <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
             Heat
-            <Text style={{fontWeight: 'bold'}}> {convertedWaterWeight} </Text>
+            <Text
+              style={{fontWeight: 'bold'}}>{` ${convertedWaterWeight} `}</Text>
             of water to a temperature of
-            <Text style={{fontWeight: 'bold'}}> {convertedWaterTemp}</Text>.
+            <Text style={{fontWeight: 'bold'}}>{` ${convertedWaterTemp}`}</Text>
+            .
           </Text>
         </View>
       );
@@ -138,12 +142,11 @@ const RecipesScreen = () => {
     if (bloomTimeAndInversion) {
       return (
         <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>3. </Text>
+          <Text style={({paddingRight: 5}, styles.steps)}>{`3. `}</Text>
           <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
             Put the aeropress in
             <Text style={{fontWeight: 'bold'}}>
-              {' '}
-              {bloomTimeAndInversion.orientation}{' '}
+              {` ${bloomTimeAndInversion.orientation} `}
             </Text>
             orientation and add the coffee.
           </Text>
@@ -156,13 +159,13 @@ const RecipesScreen = () => {
     if (bloomTimeAndInversion?.bloom) {
       return (
         <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>4. </Text>
+          <Text style={({paddingRight: 5}, styles.steps)}>{`4. `}</Text>
           <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-            Add{' '}
+            {`Add `}
             <Text style={{fontWeight: 'bold'}}>
               {bloomTimeAndInversion.water}
-            </Text>{' '}
-            and bloom for{' '}
+            </Text>
+            {` and bloom for `}
             <Text style={{fontWeight: 'bold'}}>
               {bloomTimeAndInversion.time}
             </Text>
@@ -177,10 +180,12 @@ const RecipesScreen = () => {
     if (grindAndBrewTime) {
       return (
         <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>5. </Text>
+          <Text style={({paddingRight: 5}, styles.steps)}>{`5. `}</Text>
           <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
             Add the remaining water and wait for
-            <Text style={{fontWeight: 'bold'}}> {grindAndBrewTime.time}</Text>.
+            <Text
+              style={{fontWeight: 'bold'}}>{` ${grindAndBrewTime.time}`}</Text>
+            .
           </Text>
         </View>
       );
@@ -191,7 +196,7 @@ const RecipesScreen = () => {
     if (stirring) {
       return (
         <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>6. </Text>
+          <Text style={({paddingRight: 5}, styles.steps)}>{`6. `}</Text>
           <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
             {stirring}.
           </Text>
@@ -252,7 +257,7 @@ const RecipesScreen = () => {
           {bloomTimeAndInversion?.bloom && <View>{renderBloomStep()}</View>}
           {stirring && (
             <View style={{flexDirection: 'row'}}>
-              <Text style={({paddingRight: 5}, styles.steps)}>7. </Text>
+              <Text style={({paddingRight: 5}, styles.steps)}>{`7. `}</Text>
               <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
                 Press.
               </Text>
@@ -260,7 +265,7 @@ const RecipesScreen = () => {
           )}
           {coffeeToWaterRatio?.diluteToShare && (
             <View style={{flexDirection: 'row'}}>
-              <Text style={({paddingRight: 5}, styles.steps)}>8. </Text>
+              <Text style={({paddingRight: 5}, styles.steps)}>{`8. `}</Text>
               <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
                 Dilute to share.
               </Text>
