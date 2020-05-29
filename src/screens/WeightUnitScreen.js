@@ -1,8 +1,10 @@
 import React, {useContext} from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import UnitContext from '../context/unit-context';
+
+import SettingsRow from '../components/SettingsRow';
 
 const TemperatureUnitScreen = ({navigation}) => {
   const {useGrams, setGrams} = useContext(UnitContext);
@@ -11,29 +13,30 @@ const TemperatureUnitScreen = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.unitsSelectionOuterContainer}>
         <View style={styles.unitsSelectionInnerContainer}>
-          <TouchableOpacity
-            style={[
-              (styles.unitsSelectionRow, styles.unitsSelectionRow),
-              {borderBottomWidth: 1, borderColor: '#c4c4c4'},
-            ]}
-            onPress={() => setGrams(true)}>
-            <Text style={styles.labelText}>Grams (g)</Text>
-            <Text style={styles.unitText}>
-              {useGrams && (
-                <Ionicons name="ios-checkmark" color="blue" size={20} />
-              )}
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={(styles.unitsSelectionRow, styles.unitsSelectionRow)}
-            onPress={() => setGrams(false)}>
-            <Text style={styles.labelText}>Ounces (oz)</Text>
-            <Text style={styles.unitText}>
-              {!useGrams && (
-                <Ionicons name="ios-checkmark" color="blue" size={20} />
-              )}
-            </Text>
-          </TouchableOpacity>
+          <SettingsRow
+            onPress={() => setGrams(true)}
+            settingName="Grams (g)"
+            icon={
+              useGrams && (
+                <Text style={styles.unitText}>
+                  <Ionicons name="ios-checkmark" color="blue" size={20} />
+                </Text>
+              )
+            }
+          />
+
+          <SettingsRow
+            onPress={() => setGrams(false)}
+            settingName="Ounces (oz)"
+            outerStyle={{borderBottomWidth: 0}}
+            icon={
+              !useGrams && (
+                <Text style={styles.unitText}>
+                  <Ionicons name="ios-checkmark" color="blue" size={20} />
+                </Text>
+              )
+            }
+          />
         </View>
       </View>
     </View>

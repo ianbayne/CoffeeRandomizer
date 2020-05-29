@@ -4,6 +4,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import UnitContext from '../context/unit-context';
 
+import SettingsRow from '../components/SettingsRow';
+
 const TemperatureUnitScreen = ({navigation}) => {
   const {useCelsius, setCelsius} = useContext(UnitContext);
 
@@ -11,29 +13,30 @@ const TemperatureUnitScreen = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.unitsSelectionOuterContainer}>
         <View style={styles.unitsSelectionInnerContainer}>
-          <TouchableOpacity
-            style={[
-              (styles.unitsSelectionRow, styles.unitsSelectionRow),
-              {borderBottomWidth: 1, borderColor: '#c4c4c4'},
-            ]}
-            onPress={() => setCelsius(true)}>
-            <Text style={styles.labelText}>Celsius (°C)</Text>
-            <Text style={styles.unitText}>
-              {useCelsius && (
-                <Ionicons name="ios-checkmark" color="blue" size={20} />
-              )}
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={(styles.unitsSelectionRow, styles.unitsSelectionRow)}
-            onPress={() => setCelsius(false)}>
-            <Text style={styles.labelText}>Fahrenheit (°F)</Text>
-            <Text style={styles.unitText}>
-              {!useCelsius && (
-                <Ionicons name="ios-checkmark" color="blue" size={20} />
-              )}
-            </Text>
-          </TouchableOpacity>
+          <SettingsRow
+            onPress={() => setCelsius(true)}
+            settingName="Celsius (°C)"
+            icon={
+              useCelsius && (
+                <Text style={styles.unitText}>
+                  <Ionicons name="ios-checkmark" color="blue" size={20} />
+                </Text>
+              )
+            }
+          />
+
+          <SettingsRow
+            onPress={() => setCelsius(false)}
+            settingName="Fahrenheit (°F)"
+            outerStyle={{borderBottomWidth: 0}}
+            icon={
+              !useCelsius && (
+                <Text style={styles.unitText}>
+                  <Ionicons name="ios-checkmark" color="blue" size={20} />
+                </Text>
+              )
+            }
+          />
         </View>
       </View>
     </View>

@@ -4,6 +4,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import UnitContext from '../context/unit-context';
 
+import SettingsRow from '../components/SettingsRow';
+
 const SettingsScreen = ({navigation}) => {
   const {useCelsius, useGrams} = useContext(UnitContext);
 
@@ -20,66 +22,62 @@ const SettingsScreen = ({navigation}) => {
           UNITS
         </Text>
         <View style={styles.unitsSelectionInnerContainer}>
-          <TouchableOpacity
-            style={[
-              (styles.unitsSelectionRow, styles.unitsSelectionRow),
-              {borderBottomWidth: 1, borderColor: '#c4c4c4'},
-            ]}
-            onPress={() => navigation.navigate('Temperature Unit')}>
-            <Text style={styles.labelText}>Temperature Unit</Text>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'flex-start',
-                justifyContent: 'space-between',
-              }}>
+          <SettingsRow
+            navigation={navigation}
+            onPress={() => navigation.navigate('Temperature Unit')}
+            settingName="Temperature Unit"
+            settingUnit={
               <Text style={styles.unitText}>
                 {useCelsius ? '°C  ' : '°F  '}
               </Text>
+            }
+            icon={
               <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.unitsSelectionRow}
-            onPress={() => navigation.navigate('Weight Unit')}>
-            <Text style={styles.labelText}>Weight Unit</Text>
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'flex-start',
-                justifyContent: 'space-between',
-              }}>
+            }
+          />
+
+          <SettingsRow
+            navigation={navigation}
+            onPress={() => navigation.navigate('Weight Unit')}
+            settingName="Weight Unit"
+            outerStyle={{borderBottomWidth: 0}}
+            settingUnit={
               <Text style={styles.unitText}>{useGrams ? 'g  ' : 'oz  '}</Text>
+            }
+            icon={
               <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
-            </View>
-          </TouchableOpacity>
+            }
+          />
         </View>
       </View>
       <View style={styles.unitsSelectionInnerContainer}>
-        <TouchableOpacity
-          style={[
-            (styles.unitsSelectionRow, styles.unitsSelectionRow),
-            {borderBottomWidth: 1, borderColor: '#c4c4c4'},
-          ]}
-          onPress={() => navigation.navigate('About')}>
-          <Text style={styles.labelText}>About</Text>
-          <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[
-            (styles.unitsSelectionRow, styles.unitsSelectionRow),
-            {borderBottomWidth: 1, borderColor: '#c4c4c4'},
-          ]}
-          onPress={() => navigation.navigate('Feedback')}>
-          <Text style={styles.labelText}>Feedback</Text>
-          <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.unitsSelectionRow}
-          onPress={() => navigation.navigate('Credits')}>
-          <Text style={styles.labelText}>Credits</Text>
-          <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
-        </TouchableOpacity>
+        <SettingsRow
+          navigation={navigation}
+          onPress={() => navigation.navigate('About')}
+          settingName="About"
+          icon={
+            <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
+          }
+        />
+
+        <SettingsRow
+          navigation={navigation}
+          onPress={() => navigation.navigate('Feedback')}
+          settingName="Feedback"
+          icon={
+            <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
+          }
+        />
+
+        <SettingsRow
+          navigation={navigation}
+          onPress={() => navigation.navigate('Credits')}
+          settingName="Credits"
+          outerStyle={{borderBottomWidth: 0}}
+          icon={
+            <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
+          }
+        />
       </View>
       <Text style={{textAlign: 'center', marginTop: 20}}>
         AeroPress Project v1.0.0
@@ -109,9 +107,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'space-between',
     paddingVertical: 10,
-    fontSize: 20,
-  },
-  labelText: {
     fontSize: 20,
   },
   unitText: {
