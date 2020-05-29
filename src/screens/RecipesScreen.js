@@ -11,6 +11,8 @@ import {
   Dimensions,
 } from 'react-native';
 
+import RecipeStep from '../components/RecipeStep';
+
 import UnitContext from '../context/unit-context';
 
 import {
@@ -85,18 +87,15 @@ const RecipesScreen = () => {
         convertedCoffeeWeight = coffeeWeight;
       }
       return (
-        <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>{`1. `}</Text>
-          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-            Grind
-            <Text
-              style={{fontWeight: 'bold'}}>{` ${convertedCoffeeWeight} `}</Text>
-            of coffee to {grindAndBrewTime.grind !== 'your desired' && 'a '}
-            <Text
-              style={{fontWeight: 'bold'}}>{`${grindAndBrewTime.grind} `}</Text>
-            consistency.
-          </Text>
-        </View>
+        <RecipeStep stepCount={1}>
+          Grind
+          <Text
+            style={{fontWeight: 'bold'}}>{` ${convertedCoffeeWeight} `}</Text>
+          of coffee to {grindAndBrewTime.grind !== 'your desired' && 'a '}
+          <Text
+            style={{fontWeight: 'bold'}}>{`${grindAndBrewTime.grind} `}</Text>
+          consistency.
+        </RecipeStep>
       );
     }
   }
@@ -123,17 +122,13 @@ const RecipesScreen = () => {
         convertedWaterWeight = waterWeight;
       }
       return (
-        <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>{`2. `}</Text>
-          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-            Heat
-            <Text
-              style={{fontWeight: 'bold'}}>{` ${convertedWaterWeight} `}</Text>
-            of water to a temperature of
-            <Text style={{fontWeight: 'bold'}}>{` ${convertedWaterTemp}`}</Text>
-            .
-          </Text>
-        </View>
+        <RecipeStep stepCount={2}>
+          Heat
+          <Text
+            style={{fontWeight: 'bold'}}>{` ${convertedWaterWeight} `}</Text>
+          of water to a temperature of
+          <Text style={{fontWeight: 'bold'}}>{` ${convertedWaterTemp}`}</Text>.
+        </RecipeStep>
       );
     }
   }
@@ -141,16 +136,13 @@ const RecipesScreen = () => {
   function renderOrientationStep() {
     if (bloomTimeAndInversion) {
       return (
-        <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>{`3. `}</Text>
-          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-            Put the aeropress in
-            <Text style={{fontWeight: 'bold'}}>
-              {` ${bloomTimeAndInversion.orientation} `}
-            </Text>
-            orientation and add the coffee.
+        <RecipeStep stepCount={3}>
+          Put the aeropress in
+          <Text style={{fontWeight: 'bold'}}>
+            {` ${bloomTimeAndInversion.orientation} `}
           </Text>
-        </View>
+          orientation and add the coffee.
+        </RecipeStep>
       );
     }
   }
@@ -158,20 +150,23 @@ const RecipesScreen = () => {
   function renderBloomStep() {
     if (bloomTimeAndInversion?.bloom) {
       return (
-        <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>{`4. `}</Text>
-          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-            {`Add `}
-            <Text style={{fontWeight: 'bold'}}>
-              {bloomTimeAndInversion.water}
-            </Text>
-            {` and bloom for `}
-            <Text style={{fontWeight: 'bold'}}>
-              {bloomTimeAndInversion.time}
-            </Text>
-            .
+        <RecipeStep stepCount={4}>
+          {`Add `}
+          <Text style={{fontWeight: 'bold'}}>
+            {bloomTimeAndInversion.water}
           </Text>
-        </View>
+          {` and bloom for `}
+          <Text style={{fontWeight: 'bold'}}>
+            {`${bloomTimeAndInversion.time}.`}
+          </Text>
+        </RecipeStep>
+      );
+    }
+    if (!bloomTimeAndInversion?.bloom) {
+      return (
+        <RecipeStep stepCount={4}>
+          <Text>Skip the bloom step.</Text>
+        </RecipeStep>
       );
     }
   }
@@ -179,29 +174,19 @@ const RecipesScreen = () => {
   function renderBrewStep() {
     if (grindAndBrewTime) {
       return (
-        <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>{`5. `}</Text>
-          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-            Add the remaining water and wait for
-            <Text
-              style={{fontWeight: 'bold'}}>{` ${grindAndBrewTime.time}`}</Text>
-            .
-          </Text>
-        </View>
+        <RecipeStep stepCount={5}>
+          Add the remaining water and wait for
+          <Text
+            style={{fontWeight: 'bold'}}>{` ${grindAndBrewTime.time}`}</Text>
+          .
+        </RecipeStep>
       );
     }
   }
 
   function renderStirStep() {
     if (stirring) {
-      return (
-        <View style={{flexDirection: 'row'}}>
-          <Text style={({paddingRight: 5}, styles.steps)}>{`6. `}</Text>
-          <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-            {stirring}.
-          </Text>
-        </View>
-      );
+      return <RecipeStep stepCount={6}>{stirring}.</RecipeStep>;
     }
   }
 
@@ -252,24 +237,12 @@ const RecipesScreen = () => {
           {renderGrindCoffeeStep()}
           {renderHeatWaterStep()}
           {renderOrientationStep()}
-          {renderBloomStep()}
+          {bloomTimeAndInversion && renderBloomStep()}
           {renderBrewStep()}
           {renderStirStep()}
-          {stirring && (
-            <View style={{flexDirection: 'row'}}>
-              <Text style={({paddingRight: 5}, styles.steps)}>{`7. `}</Text>
-              <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-                Press.
-              </Text>
-            </View>
-          )}
+          {stirring && <RecipeStep stepCount={7}>Press.</RecipeStep>}
           {coffeeToWaterRatio?.diluteToShare && (
-            <View style={{flexDirection: 'row'}}>
-              <Text style={({paddingRight: 5}, styles.steps)}>{`8. `}</Text>
-              <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>
-                Dilute to share.
-              </Text>
-            </View>
+            <RecipeStep stepCount={8}>Dilute to share.</RecipeStep>
           )}
         </View>
       </ScrollView>
