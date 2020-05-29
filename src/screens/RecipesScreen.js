@@ -51,7 +51,7 @@ const RecipesScreen = () => {
     setIsLoading(true);
 
     setTimeout(() => {
-      renderRecipe();
+      setBrewingStates();
       setIsLoading(false);
     }, 400);
   }
@@ -64,7 +64,7 @@ const RecipesScreen = () => {
     setBloomTimeAndInversion(null);
   }
 
-  function renderRecipe() {
+  function setBrewingStates() {
     setStirring(selectRandomItem(STIRRING));
     setWaterTemp(selectRandomItem(WATER_TEMPERATURE_IN_CELSIUS));
     setCoffeeToWaterRatio(selectRandomItem(COFFEE_TO_WATER_RATIO));
