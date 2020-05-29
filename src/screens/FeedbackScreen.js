@@ -2,16 +2,18 @@ import React, {useState} from 'react';
 import {View, StyleSheet, ActivityIndicator} from 'react-native';
 import {WebView} from 'react-native-webview';
 
+const FORM_URI =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfezWSiaL5r0zau9iCVie9K4G3tIemrhbQPEi61tlk7OUHd_g/viewform?usp=sf_link';
+
+const INJECTED_JAVASCRIPT =
+  "document.getElementsByClassName('freebirdFormviewerViewNavigationPasswordWarning')[0].remove();" +
+  "document.getElementsByClassName('freebirdFormviewerViewFooterDisclaimer')[0].parentElement.remove();" +
+  "document.getElementsByClassName('freebirdFormviewerViewFeedbackSubmitFeedbackButton')[0].remove();" +
+  "document.getElementsByClassName('freebirdThemedFilledButtonM2')[0].style.backgroundColor = '#ff9900';" +
+  true;
+
 const FeedbackScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const FORM_URI =
-    'https://docs.google.com/forms/d/e/1FAIpQLSfezWSiaL5r0zau9iCVie9K4G3tIemrhbQPEi61tlk7OUHd_g/viewform?usp=sf_link';
-  const INJECTED_JAVASCRIPT =
-    "document.getElementsByClassName('freebirdFormviewerViewNavigationPasswordWarning')[0].remove();" +
-    "document.getElementsByClassName('freebirdFormviewerViewFooterDisclaimer')[0].parentElement.remove();" +
-    "document.getElementsByClassName('freebirdFormviewerViewFeedbackSubmitFeedbackButton')[0].remove();" +
-    "document.getElementsByClassName('freebirdThemedFilledButtonM2')[0].style.backgroundColor = '#ff9900';" +
-    true;
 
   let webref;
 
@@ -30,7 +32,7 @@ const FeedbackScreen = () => {
         />
       )}
       <WebView
-        onLoad={() => handleOnLoad()}
+        onLoad={handleOnLoad}
         source={{
           uri: FORM_URI,
         }}
