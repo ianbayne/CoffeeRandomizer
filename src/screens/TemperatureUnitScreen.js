@@ -33,7 +33,11 @@ const TemperatureUnitScreen = ({navigation}) => {
           <SettingsRow
             onPress={handleOnPress}
             settingName="Fahrenheit (°F)"
-            outerStyle={{borderBottomWidth: 0}}
+            outerStyle={{
+              borderBottomWidth: 0,
+              paddingBottom: 0,
+              marginBottom: 0,
+            }}
             disabled={!celsius}
             icon={
               !celsius && (
@@ -59,7 +63,6 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   unitsSelectionInnerContainer: {
-    paddingLeft: 15,
     backgroundColor: '#fff',
     borderTopWidth: 1,
     borderBottomWidth: 1,

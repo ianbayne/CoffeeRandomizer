@@ -38,7 +38,9 @@ const SettingsScreen = ({navigation}) => {
             navigation={navigation}
             onPress={() => navigation.navigate('Weight Unit')}
             settingName="Weight Unit"
-            outerStyle={{borderBottomWidth: 0}}
+            outerStyle={{
+              borderBottomWidth: 0,
+            }}
             settingUnit={
               <Text style={styles.unitText}>{grams ? 'g  ' : 'oz  '}</Text>
             }
@@ -71,7 +73,9 @@ const SettingsScreen = ({navigation}) => {
           navigation={navigation}
           onPress={() => navigation.navigate('Credits')}
           settingName="Credits"
-          outerStyle={{borderBottomWidth: 0}}
+          outerStyle={{
+            borderBottomWidth: 0,
+          }}
           icon={
             <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
           }
@@ -94,7 +98,6 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
   unitsSelectionInnerContainer: {
-    paddingLeft: 15,
     backgroundColor: '#fff',
     borderTopWidth: 1,
     borderBottomWidth: 1,

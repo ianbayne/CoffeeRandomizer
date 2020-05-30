@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity, Text, View, StyleSheet} from 'react-native';
+import {TouchableHighlight, Text, View, StyleSheet} from 'react-native';
 
 const SettingsRow = ({
   navigation,
@@ -11,24 +11,36 @@ const SettingsRow = ({
   disabled,
 }) => {
   return (
-    <TouchableOpacity
+    <TouchableHighlight
       style={[
         styles.unitsSelectionRow,
         {borderBottomWidth: 1, borderColor: '#c4c4c4'},
         outerStyle,
       ]}
-      onPress={onPress}>
-      <Text style={styles.labelText}>{settingName}</Text>
+      onPress={onPress}
+      underlayColor="#c4c4c4"
+      disabled={disabled}>
       <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'flex-start',
-          justifyContent: 'space-between',
-        }}>
-        {settingUnit}
-        {icon}
+        style={[
+          {
+            flex: 1,
+            alignItems: 'flex-start',
+            justifyContent: 'space-between',
+            flexDirection: 'row',
+            marginLeft: 15,
+            paddingVertical: 10,
+          },
+        ]}>
+        <Text style={styles.labelText}>{settingName}</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+          }}>
+          {settingUnit}
+          {icon}
+        </View>
       </View>
-    </TouchableOpacity>
+    </TouchableHighlight>
   );
 };
 
@@ -37,8 +49,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
-    paddingVertical: 10,
-    fontSize: 20,
   },
   labelText: {
     fontSize: 20,
