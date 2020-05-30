@@ -20,6 +20,7 @@ const TemperatureUnitScreen = ({navigation}) => {
           <SettingsRow
             onPress={handleOnPress}
             settingName="Celsius (°C)"
+            disabled={useCelsius}
             icon={
               useCelsius && (
                 <Text style={styles.unitText}>
@@ -33,6 +34,7 @@ const TemperatureUnitScreen = ({navigation}) => {
             onPress={handleOnPress}
             settingName="Fahrenheit (°F)"
             outerStyle={{borderBottomWidth: 0}}
+            disabled={!useCelsius}
             icon={
               !useCelsius && (
                 <Text style={styles.unitText}>

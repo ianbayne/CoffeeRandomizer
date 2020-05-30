@@ -8,6 +8,7 @@ const SettingsRow = ({
   onPress,
   settingName,
   outerStyle,
+  disabled,
 }) => {
   return (
     <TouchableOpacity

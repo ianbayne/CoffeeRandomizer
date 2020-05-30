@@ -20,6 +20,7 @@ const TemperatureUnitScreen = ({navigation}) => {
           <SettingsRow
             onPress={handleOnPress}
             settingName="Grams (g)"
+            disabled={useGrams}
             icon={
               useGrams && (
                 <Text style={styles.unitText}>
@@ -33,6 +34,7 @@ const TemperatureUnitScreen = ({navigation}) => {
             onPress={handleOnPress}
             settingName="Ounces (oz)"
             outerStyle={{borderBottomWidth: 0}}
+            disabled={!useGrams}
             icon={
               !useGrams && (
                 <Text style={styles.unitText}>
