@@ -9,12 +9,16 @@ import SettingsRow from '../components/SettingsRow';
 const TemperatureUnitScreen = ({navigation}) => {
   const {useCelsius, setCelsius} = useContext(UnitContext);
 
+  function handleOnPress() {
+    setCelsius(!useCelsius);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.unitsSelectionOuterContainer}>
         <View style={styles.unitsSelectionInnerContainer}>
           <SettingsRow
-            onPress={() => setCelsius(true)}
+            onPress={handleOnPress}
             settingName="Celsius (°C)"
             icon={
               useCelsius && (
@@ -26,7 +30,7 @@ const TemperatureUnitScreen = ({navigation}) => {
           />
 
           <SettingsRow
-            onPress={() => setCelsius(false)}
+            onPress={handleOnPress}
             settingName="Fahrenheit (°F)"
             outerStyle={{borderBottomWidth: 0}}
             icon={

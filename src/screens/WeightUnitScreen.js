@@ -9,12 +9,16 @@ import SettingsRow from '../components/SettingsRow';
 const TemperatureUnitScreen = ({navigation}) => {
   const {useGrams, setGrams} = useContext(UnitContext);
 
+  function handleOnPress() {
+    setGrams(!useGrams);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.unitsSelectionOuterContainer}>
         <View style={styles.unitsSelectionInnerContainer}>
           <SettingsRow
-            onPress={() => setGrams(true)}
+            onPress={handleOnPress}
             settingName="Grams (g)"
             icon={
               useGrams && (
@@ -26,7 +30,7 @@ const TemperatureUnitScreen = ({navigation}) => {
           />
 
           <SettingsRow
-            onPress={() => setGrams(false)}
+            onPress={handleOnPress}
             settingName="Ounces (oz)"
             outerStyle={{borderBottomWidth: 0}}
             icon={
