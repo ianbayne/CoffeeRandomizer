@@ -7,7 +7,7 @@ import UnitContext from '../context/unit-context';
 import SettingsRow from '../components/SettingsRow';
 
 const SettingsScreen = ({navigation}) => {
-  const {useCelsius, useGrams} = useContext(UnitContext);
+  const {celsius, grams} = useContext(UnitContext);
 
   return (
     <View style={styles.container}>
@@ -27,9 +27,7 @@ const SettingsScreen = ({navigation}) => {
             onPress={() => navigation.navigate('Temperature Unit')}
             settingName="Temperature Unit"
             settingUnit={
-              <Text style={styles.unitText}>
-                {useCelsius ? '°C  ' : '°F  '}
-              </Text>
+              <Text style={styles.unitText}>{celsius ? '°C  ' : '°F  '}</Text>
             }
             icon={
               <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />
@@ -42,7 +40,7 @@ const SettingsScreen = ({navigation}) => {
             settingName="Weight Unit"
             outerStyle={{borderBottomWidth: 0}}
             settingUnit={
-              <Text style={styles.unitText}>{useGrams ? 'g  ' : 'oz  '}</Text>
+              <Text style={styles.unitText}>{grams ? 'g  ' : 'oz  '}</Text>
             }
             icon={
               <Ionicons style={styles.arrowForward} name="ios-arrow-forward" />

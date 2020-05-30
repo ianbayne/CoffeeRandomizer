@@ -13,29 +13,34 @@ import UnitContext from './context/unit-context';
 const Tab = createBottomTabNavigator();
 
 const App: () => React$Node = () => {
-  const [useCelsius, setUseCelsius] = useState(true);
-  const [useGrams, setUseGrams] = useState(true);
+  const [celsius, setCelsius] = useState(true);
+  const [grams, setGrams] = useState(true);
 
-  const setCelsius = useCelsius => {
-    AsyncStorage.setItem('celsius', JSON.stringify(useCelsius));
-    setUseCelsius(useCelsius);
+  const setAsyncStorageForCelsius = celsius => {
+    AsyncStorage.setItem('celsius', JSON.stringify(celsius));
+    setCelsius(celsius);
   };
-  const setGrams = useGrams => {
-    AsyncStorage.setItem('grams', JSON.stringify(useGrams));
-    setUseGrams(useGrams);
+  const setAsyncStorageForGrams = grams => {
+    AsyncStorage.setItem('grams', JSON.stringify(grams));
+    setGrams(grams);
   };
 
-  const value = {useCelsius, setCelsius, useGrams, setGrams};
+  const value = {
+    celsius,
+    setAsyncStorageForCelsius,
+    grams,
+    setAsyncStorageForGrams,
+  };
 
   useEffect(() => {
     (async () => {
       const storedCelsius = await AsyncStorage.getItem('celsius');
       if (storedCelsius) {
-        setUseCelsius(JSON.parse(storedCelsius));
+        setCelsius(JSON.parse(storedCelsius));
       }
       const storedGrams = await AsyncStorage.getItem('grams');
       if (storedGrams) {
-        setUseGrams(JSON.parse(storedGrams));
+        setGrams(JSON.parse(storedGrams));
       }
     })();
   }, []);

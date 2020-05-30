@@ -1,10 +1,10 @@
 import {createContext} from 'react';
 
 const UnitContext = createContext({
-  useCelsius: true,
-  setUseCelsius: () => {},
-  useGrams: true,
-  setUseGrams: () => {},
+  celsius: true,
+  setCelsius: () => {},
+  grams: true,
+  setGrams: () => {},
 });
 
 export default UnitContext;

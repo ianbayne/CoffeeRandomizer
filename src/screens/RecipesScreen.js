@@ -26,7 +26,7 @@ import {
 const {height} = Dimensions.get('window');
 
 const RecipesScreen = () => {
-  const {useCelsius, useGrams} = useContext(UnitContext);
+  const {celsius, grams} = useContext(UnitContext);
 
   const [stirring, setStirring] = useState(null);
   const [waterTemp, setWaterTemp] = useState(null);
@@ -80,7 +80,7 @@ const RecipesScreen = () => {
 
       let convertedCoffeeWeight;
       if (typeof coffeeWeight === 'number') {
-        convertedCoffeeWeight = useGrams
+        convertedCoffeeWeight = grams
           ? `${coffeeWeight}g`
           : `${convertGramsToOunces(coffeeWeight)} oz`;
       } else {
@@ -106,7 +106,7 @@ const RecipesScreen = () => {
 
       let convertedWaterTemp;
       if (typeof waterTemp === 'number') {
-        convertedWaterTemp = useCelsius
+        convertedWaterTemp = celsius
           ? `${waterTemp} °C`
           : `${convertCelsiusToFahrenheit(waterTemp)} °F`;
       } else {
@@ -115,7 +115,7 @@ const RecipesScreen = () => {
 
       let convertedWaterWeight;
       if (typeof waterWeight === 'number') {
-        convertedWaterWeight = useGrams
+        convertedWaterWeight = grams
           ? `${waterWeight}g`
           : `${convertGramsToOunces(waterWeight)} oz`;
       } else {

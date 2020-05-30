@@ -7,10 +7,10 @@ import UnitContext from '../context/unit-context';
 import SettingsRow from '../components/SettingsRow';
 
 const TemperatureUnitScreen = ({navigation}) => {
-  const {useCelsius, setCelsius} = useContext(UnitContext);
+  const {celsius, setAsyncStorageForCelsius} = useContext(UnitContext);
 
   function handleOnPress() {
-    setCelsius(!useCelsius);
+    setAsyncStorageForCelsius(!celsius);
   }
 
   return (
@@ -20,9 +20,9 @@ const TemperatureUnitScreen = ({navigation}) => {
           <SettingsRow
             onPress={handleOnPress}
             settingName="Celsius (°C)"
-            disabled={useCelsius}
+            disabled={celsius}
             icon={
-              useCelsius && (
+              celsius && (
                 <Text style={styles.unitText}>
                   <Ionicons name="ios-checkmark" color="blue" size={20} />
                 </Text>
@@ -34,9 +34,9 @@ const TemperatureUnitScreen = ({navigation}) => {
             onPress={handleOnPress}
             settingName="Fahrenheit (°F)"
             outerStyle={{borderBottomWidth: 0}}
-            disabled={!useCelsius}
+            disabled={!celsius}
             icon={
-              !useCelsius && (
+              !celsius && (
                 <Text style={styles.unitText}>
                   <Ionicons name="ios-checkmark" color="blue" size={20} />
                 </Text>
