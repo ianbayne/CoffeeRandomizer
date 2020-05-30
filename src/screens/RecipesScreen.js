@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import {
+  SafeAreaView,
   TouchableHighlight,
   StyleSheet,
   ScrollView,
@@ -23,7 +24,7 @@ import {
   BLOOM_TIME_AND_INVERSION,
 } from '../constants';
 
-const {height} = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 const RecipesScreen = () => {
   const {celsius, grams} = useContext(UnitContext);
@@ -127,7 +128,7 @@ const RecipesScreen = () => {
           <Text
             style={{fontWeight: 'bold'}}>{` ${convertedWaterWeight} `}</Text>
           of water to a temperature of
-          <Text style={{fontWeight: 'bold'}}>{` ${convertedWaterTemp}`}</Text>.
+          <Text style={{fontWeight: 'bold'}}>{` ${convertedWaterTemp}.`}</Text>
         </RecipeStep>
       );
     }
@@ -151,13 +152,13 @@ const RecipesScreen = () => {
     if (bloomTimeAndInversion?.bloom) {
       return (
         <RecipeStep stepCount={4}>
-          {`Add `}
+          Add
           <Text style={{fontWeight: 'bold'}}>
-            {bloomTimeAndInversion.water}
+            {` ${bloomTimeAndInversion.water} `}
           </Text>
-          {` and bloom for `}
+          and bloom for
           <Text style={{fontWeight: 'bold'}}>
-            {`${bloomTimeAndInversion.time}.`}
+            {` ${bloomTimeAndInversion.time}.`}
           </Text>
         </RecipeStep>
       );
@@ -176,9 +177,9 @@ const RecipesScreen = () => {
       return (
         <RecipeStep stepCount={5}>
           Add the remaining water and wait for
-          <Text
-            style={{fontWeight: 'bold'}}>{` ${grindAndBrewTime.time}`}</Text>
-          .
+          <Text style={{fontWeight: 'bold'}}>
+            {` ${grindAndBrewTime.time}.`}
+          </Text>
         </RecipeStep>
       );
     }
@@ -211,29 +212,10 @@ const RecipesScreen = () => {
   return (
     <React.Fragment>
       <StatusBar barStyle="light-content" />
-      <ScrollView style={styles.container}>
-        <View style={styles.mainContent}>
-          <View
-            style={{
-              position: 'absolute',
-              height: height / 2 + 80,
-              width: '100%',
-              left: 5,
-            }}>
-            <Animated.Image
-              style={{
-                position: 'relative',
-                left: '50%',
-                top: '50%',
-                height: 100,
-                width: 48,
-                transform: [{rotate: spin}],
-                opacity: 0.2,
-              }}
-              source={require('../assets/images/aeropress.png')}
-            />
-          </View>
-          <View style={styles.buttonContainer}>
+      <SafeAreaView style={{flex: 1, backgroundColor: '#f9f9f9'}}>
+        <ScrollView style={{flex: 1}} contentContainerStyle={{flex: 1}}>
+          <View style={{marginBottom: 50}}></View>
+          <View style={styles.buttonAndIconContainer}>
             <TouchableHighlight
               style={styles.button}
               activeOpacity={1}
@@ -242,20 +224,25 @@ const RecipesScreen = () => {
               disabled={isLoading}>
               <Text style={styles.buttonText}>New Recipe</Text>
             </TouchableHighlight>
+            <Animated.Image
+              style={[styles.icon, {transform: [{rotate: spin}]}]}
+              source={require('../assets/images/aeropress.png')}
+            />
           </View>
-
-          {renderGrindCoffeeStep()}
-          {renderHeatWaterStep()}
-          {renderOrientationStep()}
-          {bloomTimeAndInversion && renderBloomStep()}
-          {renderBrewStep()}
-          {renderStirStep()}
-          {stirring && <RecipeStep stepCount={7}>Press.</RecipeStep>}
-          {coffeeToWaterRatio?.diluteToShare && (
-            <RecipeStep stepCount={8}>Dilute to share.</RecipeStep>
-          )}
-        </View>
-      </ScrollView>
+          <View style={styles.recipeContainer}>
+            {renderGrindCoffeeStep()}
+            {renderHeatWaterStep()}
+            {renderOrientationStep()}
+            {bloomTimeAndInversion && renderBloomStep()}
+            {renderBrewStep()}
+            {renderStirStep()}
+            {stirring && <RecipeStep stepCount={7}>Press.</RecipeStep>}
+            {coffeeToWaterRatio?.diluteToShare && (
+              <RecipeStep stepCount={8}>Dilute to share.</RecipeStep>
+            )}
+          </View>
+        </ScrollView>
+      </SafeAreaView>
     </React.Fragment>
   );
 };
@@ -268,8 +255,6 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     width: 225,
     backgroundColor: '#ff9900',
-    marginTop: 30,
-    marginBottom: 40,
     shadowColor: '#000',
     shadowOffset: {
       width: 1,
@@ -279,31 +264,28 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 6,
   },
+  buttonAndIconContainer: {
+    flex: 1,
+    alignItems: 'center',
+  },
   buttonText: {
     fontWeight: 'bold',
     fontSize: 20,
     textAlign: 'center',
     color: '#fff',
   },
-  buttonContainer: {
-    flex: 1,
-    alignItems: 'center',
-    marginTop: 25,
+  icon: {
+    position: 'relative',
+    top: '25%',
+    height: 100,
+    width: 48,
+    opacity: 0.2,
   },
-  container: {
-    backgroundColor: '#f9f9f9',
-    width: '100%',
-    height: '100%',
-  },
-  mainContent: {
-    paddingLeft: 30,
-    paddingRight: 45,
-    paddingBottom: 30,
-    backgroundColor: '#f9f9f9',
-  },
-  steps: {
-    fontSize: 20,
-    lineHeight: 30,
+  recipeContainer: {
+    position: 'absolute',
+    top: 160,
+    width: width * 0.9,
+    paddingLeft: 20,
   },
 });
 
