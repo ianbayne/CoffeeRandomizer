@@ -1,14 +1,14 @@
 import React, {useState, useContext} from 'react';
 import {
-  ActivityIndicator,
   TouchableHighlight,
   StyleSheet,
   ScrollView,
   Text,
   View,
   StatusBar,
-  Image,
   Dimensions,
+  Animated,
+  Easing,
 } from 'react-native';
 
 import RecipeStep from '../components/RecipeStep';
@@ -190,6 +190,24 @@ const RecipesScreen = () => {
     }
   }
 
+  const spinValue = new Animated.Value(0);
+  const animation = Animated.loop(
+    Animated.timing(spinValue, {
+      toValue: 1,
+      duration: 1000,
+      easing: Easing.linear,
+      useNativeDriver: true,
+    }),
+  );
+  const spin = spinValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
+  });
+
+  if (isLoading) {
+    animation.start();
+  }
+
   return (
     <React.Fragment>
       <StatusBar barStyle="light-content" />
@@ -202,15 +220,16 @@ const RecipesScreen = () => {
               width: '100%',
               left: 5,
             }}>
-            <Image
+            <Animated.Image
               style={{
                 position: 'relative',
                 left: '50%',
                 top: '50%',
                 height: 100,
                 width: 48,
+                transform: [{rotate: spin}],
+                opacity: 0.2,
               }}
-              opacity={0.2}
               source={require('../assets/images/aeropress.png')}
             />
           </View>
@@ -224,15 +243,6 @@ const RecipesScreen = () => {
               <Text style={styles.buttonText}>New Recipe</Text>
             </TouchableHighlight>
           </View>
-          {loading && (
-            <View style={styles.activityIndicator}>
-              <ActivityIndicator
-                animating={loading}
-                size="large"
-                color="#0000ff"
-              />
-            </View>
-          )}
 
           {renderGrindCoffeeStep()}
           {renderHeatWaterStep()}
@@ -251,11 +261,6 @@ const RecipesScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  activityIndicator: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 125,
-  },
   button: {
     paddingHorizontal: 10,
     paddingVertical: 15,
@@ -291,7 +296,8 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   mainContent: {
-    paddingHorizontal: 30,
+    paddingLeft: 30,
+    paddingRight: 45,
     paddingBottom: 30,
     backgroundColor: '#f9f9f9',
   },
