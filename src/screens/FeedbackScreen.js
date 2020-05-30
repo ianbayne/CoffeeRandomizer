@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {View, StyleSheet, ActivityIndicator} from 'react-native';
 import {WebView} from 'react-native-webview';
 
@@ -14,12 +14,11 @@ const INJECTED_JAVASCRIPT =
 
 const FeedbackScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
-
-  let webref;
+  const webref = useRef(null);
 
   function handleOnLoad() {
     setIsLoading(false);
-    webref.injectJavaScript(INJECTED_JAVASCRIPT);
+    webref.current.injectJavaScript(INJECTED_JAVASCRIPT);
   }
 
   return (
@@ -36,7 +35,7 @@ const FeedbackScreen = () => {
         source={{
           uri: FORM_URI,
         }}
-        ref={ref => (webref = ref)}
+        ref={webref}
         scalesPageToFit={false}
         javaScriptEnabled={true}
       />
