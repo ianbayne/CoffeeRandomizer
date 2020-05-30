@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   unitsSelectionOuterContainer: {
-    marginTop: 40,
+    marginTop: 49,
     marginBottom: 40,
   },
   unitsSelectionInnerContainer: {
