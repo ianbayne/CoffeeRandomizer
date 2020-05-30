@@ -10,11 +10,12 @@ import {
 } from 'react-native';
 import {WebView} from 'react-native-webview';
 
-const URL = 'https://aero.press/products/brew-recipe-dice';
+const AEROPRESS_DICE_URL = 'https://aero.press/products/brew-recipe-dice';
+const YOUTUBE_URL = 'https://www.youtube.com/embed/SHdXC_88_2g';
 
 const CreditsScreen = () => {
   function openUrl() {
-    Linking.openURL(URL);
+    Linking.openURL(AEROPRESS_DICE_URL);
   }
 
   return (
@@ -37,7 +38,7 @@ const CreditsScreen = () => {
             }}>
             <WebView
               source={{
-                uri: 'https://www.youtube.com/embed/SHdXC_88_2g',
+                uri: YOUTUBE_URL,
               }}
               style={{
                 height: 157.5,
