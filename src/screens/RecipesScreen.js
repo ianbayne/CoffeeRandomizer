@@ -24,7 +24,7 @@ import {
   BLOOM_TIME_AND_INVERSION,
 } from '../constants';
 
-const {width} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 const RecipesScreen = () => {
   const {celsius, grams} = useContext(UnitContext);
@@ -224,22 +224,24 @@ const RecipesScreen = () => {
               disabled={isLoading}>
               <Text style={styles.buttonText}>New Recipe</Text>
             </TouchableHighlight>
-            <Animated.Image
-              style={[styles.icon, {transform: [{rotate: spin}]}]}
-              source={require('../assets/images/aeropress.png')}
-            />
           </View>
-          <View style={styles.recipeContainer}>
-            {renderGrindCoffeeStep()}
-            {renderHeatWaterStep()}
-            {renderOrientationStep()}
-            {bloomTimeAndInversion && renderBloomStep()}
-            {renderBrewStep()}
-            {renderStirStep()}
-            {stirring && <RecipeStep stepCount={7}>Press.</RecipeStep>}
-            {coffeeToWaterRatio?.diluteToShare && (
-              <RecipeStep stepCount={8}>Dilute to share.</RecipeStep>
-            )}
+          <Animated.Image
+            style={[styles.icon, {transform: [{rotate: spin}]}, ,]}
+            source={require('../assets/images/aeropress.png')}
+          />
+          <View style={{width: width, position: 'absolute', top: 150}}>
+            <View style={styles.recipeContainer}>
+              {renderGrindCoffeeStep()}
+              {renderHeatWaterStep()}
+              {renderOrientationStep()}
+              {bloomTimeAndInversion && renderBloomStep()}
+              {renderBrewStep()}
+              {renderStirStep()}
+              {stirring && <RecipeStep stepCount={7}>Press.</RecipeStep>}
+              {coffeeToWaterRatio?.diluteToShare && (
+                <RecipeStep stepCount={8}>Dilute to share.</RecipeStep>
+              )}
+            </View>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -275,17 +277,18 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   icon: {
-    position: 'relative',
-    top: '25%',
+    position: 'absolute',
+    left: width / 2 - 24,
+    top: height / 2 - 100,
     height: 100,
     width: 48,
     opacity: 0.2,
   },
   recipeContainer: {
-    position: 'absolute',
-    top: 160,
-    width: width * 0.9,
-    paddingLeft: 20,
+    position: 'relative',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: (width / 1.1) * 0.8,
   },
 });
 
