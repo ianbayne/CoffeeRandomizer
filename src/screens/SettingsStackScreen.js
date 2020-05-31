@@ -1,4 +1,5 @@
 import React from 'react';
+import {Platform} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import SettingsScreen from './SettingsScreen';
@@ -19,6 +20,9 @@ const SettingsStackScreen = () => {
         },
         headerTitleStyle: {color: 'white'},
         headerTintColor: '#ff9900',
+        headerLeft: Platform.select({
+          android: false,
+        }),
       }}>
       <SettingsStack.Screen name="Settings" component={SettingsScreen} />
       <SettingsStack.Screen
