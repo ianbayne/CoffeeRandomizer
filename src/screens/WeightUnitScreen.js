@@ -24,7 +24,6 @@ const TemperatureUnitScreen = ({navigation}) => {
           <SettingsRow
             onPress={switchToGrams}
             settingName="Grams (g)"
-            disabled={grams}
             icon={
               grams && (
                 <Text style={styles.unitText}>
@@ -42,7 +41,6 @@ const TemperatureUnitScreen = ({navigation}) => {
               paddingBottom: 0,
               marginBottom: 0,
             }}
-            disabled={!grams}
             icon={
               !grams && (
                 <Text style={styles.unitText}>

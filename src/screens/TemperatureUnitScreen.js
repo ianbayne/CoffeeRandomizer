@@ -24,7 +24,6 @@ const TemperatureUnitScreen = ({navigation}) => {
           <SettingsRow
             onPress={switchToCelsius}
             settingName="Celsius (°C)"
-            disabled={celsius}
             icon={
               celsius && (
                 <Text style={styles.unitText}>
@@ -42,7 +41,6 @@ const TemperatureUnitScreen = ({navigation}) => {
               paddingBottom: 0,
               marginBottom: 0,
             }}
-            disabled={!celsius}
             icon={
               !celsius && (
                 <Text style={styles.unitText}>
