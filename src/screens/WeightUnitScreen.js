@@ -9,8 +9,12 @@ import SettingsRow from '../components/SettingsRow';
 const TemperatureUnitScreen = ({navigation}) => {
   const {grams, setAsyncStorageForGrams} = useContext(UnitContext);
 
-  function handleOnPress() {
-    setAsyncStorageForGrams(!grams);
+  function switchToGrams() {
+    setAsyncStorageForGrams(true);
+  }
+
+  function switchToOunces() {
+    setAsyncStorageForGrams(false);
   }
 
   return (
@@ -18,7 +22,7 @@ const TemperatureUnitScreen = ({navigation}) => {
       <View style={styles.unitsSelectionOuterContainer}>
         <View style={styles.unitsSelectionInnerContainer}>
           <SettingsRow
-            onPress={handleOnPress}
+            onPress={switchToGrams}
             settingName="Grams (g)"
             disabled={grams}
             icon={
@@ -31,7 +35,7 @@ const TemperatureUnitScreen = ({navigation}) => {
           />
 
           <SettingsRow
-            onPress={handleOnPress}
+            onPress={switchToOunces}
             settingName="Ounces (oz)"
             outerStyle={{
               borderBottomWidth: 0,

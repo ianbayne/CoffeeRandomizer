@@ -9,8 +9,12 @@ import SettingsRow from '../components/SettingsRow';
 const TemperatureUnitScreen = ({navigation}) => {
   const {celsius, setAsyncStorageForCelsius} = useContext(UnitContext);
 
-  function handleOnPress() {
-    setAsyncStorageForCelsius(!celsius);
+  function switchToCelsius() {
+    setAsyncStorageForCelsius(true);
+  }
+
+  function switchToFahrenheit() {
+    setAsyncStorageForCelsius(false);
   }
 
   return (
@@ -18,7 +22,7 @@ const TemperatureUnitScreen = ({navigation}) => {
       <View style={styles.unitsSelectionOuterContainer}>
         <View style={styles.unitsSelectionInnerContainer}>
           <SettingsRow
-            onPress={handleOnPress}
+            onPress={switchToCelsius}
             settingName="Celsius (°C)"
             disabled={celsius}
             icon={
@@ -31,7 +35,7 @@ const TemperatureUnitScreen = ({navigation}) => {
           />
 
           <SettingsRow
-            onPress={handleOnPress}
+            onPress={switchToFahrenheit}
             settingName="Fahrenheit (°F)"
             outerStyle={{
               borderBottomWidth: 0,
