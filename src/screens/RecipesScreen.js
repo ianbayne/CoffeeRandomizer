@@ -93,8 +93,9 @@ const RecipesScreen = () => {
           <Text
             style={{fontWeight: 'bold'}}>{` ${convertedCoffeeWeight} `}</Text>
           of coffee to {grindAndBrewTime.grind !== 'your desired' && 'a '}
-          <Text
-            style={{fontWeight: 'bold'}}>{`${grindAndBrewTime.grind} `}</Text>
+          <Text style={{fontWeight: 'bold'}}>{`${
+            grindAndBrewTime.grind
+          } `}</Text>
           consistency.
         </RecipeStep>
       );
@@ -214,7 +215,7 @@ const RecipesScreen = () => {
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{flex: 1, backgroundColor: '#f9f9f9'}}>
         <ScrollView style={{flex: 1}} contentContainerStyle={{flex: 1}}>
-          <View style={{marginBottom: 50}}></View>
+          <View style={{marginBottom: 50}} />
           <View style={styles.buttonAndIconContainer}>
             <TouchableHighlight
               style={styles.button}
