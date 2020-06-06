@@ -210,7 +210,7 @@ const RecipesScreen = () => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView style={{flex: 1, backgroundColor: '#f9f9f9'}}>
         <ScrollView style={{flex: 1}} contentContainerStyle={{flex: 1}}>
@@ -245,7 +245,7 @@ const RecipesScreen = () => {
           </View>
         </ScrollView>
       </SafeAreaView>
-    </React.Fragment>
+    </>
   );
 };
 
