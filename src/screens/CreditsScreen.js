@@ -1,11 +1,25 @@
-import React from 'react';
-import {ScrollView, View, Text, StyleSheet, Image, Linking} from 'react-native';
+import React, {useState} from 'react';
+import {
+  ScrollView,
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  Linking,
+  ActivityIndicator,
+} from 'react-native';
 import {WebView} from 'react-native-webview';
 
 const AEROPRESS_DICE_URL = 'https://aero.press/products/brew-recipe-dice';
 const YOUTUBE_URL = 'https://www.youtube.com/embed/SHdXC_88_2g';
 
 const CreditsScreen = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  function handleOnLoad() {
+    setIsLoading(false);
+  }
+
   function openUrl() {
     Linking.openURL(AEROPRESS_DICE_URL);
   }
@@ -17,6 +31,7 @@ const CreditsScreen = () => {
           <Text style={{fontWeight: 'bold', fontSize: 24, marginBottom: 30}}>
             Inspiration
           </Text>
+
           <View
             style={{
               shadowColor: '#000',
@@ -28,7 +43,15 @@ const CreditsScreen = () => {
               shadowRadius: 4.65,
               elevation: 6,
             }}>
+            {isLoading && (
+              <ActivityIndicator
+                animating={isLoading}
+                size="large"
+                style={styles.activityIndicator}
+              />
+            )}
             <WebView
+              onLoad={handleOnLoad}
               source={{
                 uri: YOUTUBE_URL,
               }}
@@ -89,6 +112,14 @@ const styles = StyleSheet.create({
   segment: {
     marginBottom: 60,
     flex: 1,
+  },
+  activityIndicator: {
+    zIndex: 99,
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    bottom: 15,
+    left: 0,
   },
 });
 
