@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
   icon: {
     position: 'absolute',
     left: width / 2 - 24,
-    top: height / 2 - 100,
+    top: height / 2 - 130,
     height: 100,
     width: 48,
     opacity: 0.2,

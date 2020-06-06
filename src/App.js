@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AsyncStorage from '@react-native-community/async-storage';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import SplashScreen from 'react-native-splash-screen';
 
 import RecipesStackScreen from './screens/RecipesStackScreen';
 import SettingsStackScreen from './screens/SettingsStackScreen';
@@ -33,6 +34,7 @@ const App: () => React$Node = () => {
   };
 
   useEffect(() => {
+    SplashScreen.hide();
     (async () => {
       const storedCelsius = await AsyncStorage.getItem('celsius');
       if (storedCelsius) {
