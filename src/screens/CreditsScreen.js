@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  ScrollView,
-  TouchableOpacity,
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  Linking,
-} from 'react-native';
+import {ScrollView, View, Text, StyleSheet, Image, Linking} from 'react-native';
 import {WebView} from 'react-native-webview';
 
 const AEROPRESS_DICE_URL = 'https://aero.press/products/brew-recipe-dice';
@@ -51,29 +43,20 @@ const CreditsScreen = () => {
 
           <View
             style={{
-              flexDirection: 'row',
-              flexWrap: 'wrap',
               paddingLeft: 20,
             }}>
-            <Text style={{fontSize: 20}}>Inspired by </Text>
-            <TouchableOpacity onPress={openUrl}>
+            <Text>
+              <Text style={{fontSize: 20}}>Inspired by </Text>
               <Text
+                onPress={openUrl}
                 style={{
                   fontSize: 20,
                   opacity: 0.5,
                 }}>
-                James Hoffman's
+                James Hoffman's Coffee Brewing Dice
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={openUrl}>
-              <Text
-                style={{
-                  fontSize: 20,
-                  opacity: 0.5,
-                }}>
-                Coffee Brewing Dice
-              </Text>
-            </TouchableOpacity>
+              <Text>.</Text>
+            </Text>
           </View>
         </View>
         <View style={styles.segment}>
@@ -90,7 +73,7 @@ const CreditsScreen = () => {
             source={require('../assets/images/aeropress.png')}
           />
           <Text style={{fontSize: 20, paddingLeft: 20}}>
-            Aeropress by Ben Biondo from the Noun Project
+            Aeropress by Ben Biondo from the Noun Project.
           </Text>
         </View>
       </View>
