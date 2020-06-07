@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'AeropressProject' do
-  # Pods for AeropressProject
+target 'CoffeeRandomizer' do
+  # Pods for CoffeeRandomizer
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -36,7 +36,7 @@ target 'AeropressProject' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'AeropressProjectTests' do
+  target 'CoffeeRandomizerTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -44,10 +44,10 @@ target 'AeropressProject' do
   use_native_modules!
 end
 
-target 'AeropressProject-tvOS' do
-  # Pods for AeropressProject-tvOS
+target 'CoffeeRandomizer-tvOS' do
+  # Pods for CoffeeRandomizer-tvOS
 
-  target 'AeropressProject-tvOSTests' do
+  target 'CoffeeRandomizer-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

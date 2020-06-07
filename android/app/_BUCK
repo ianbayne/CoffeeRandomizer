@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.aeropressproject",
+    package = "com.coffeerandomizer",
 )
 
 android_resource(
     name = "res",
-    package = "com.aeropressproject",
+    package = "com.coffeerandomizer",
     res = "src/main/res",
 )
 

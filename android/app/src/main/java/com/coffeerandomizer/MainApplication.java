@@ -1,4 +1,4 @@
-package com.aeropressproject;
+package com.coffeerandomizer;
 
 import android.app.Application;
 import android.content.Context;

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* AeropressProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AeropressProjectTests.m */; };
-		055F7E251A653468EC382ED3 /* libPods-AeropressProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E0ADC5EE40A200367CBC4D /* libPods-AeropressProject-tvOSTests.a */; };
+		00E356F31AD99517003FC87E /* CoffeeRandomizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CoffeeRandomizerTests.m */; };
+		055F7E251A653468EC382ED3 /* libPods-CoffeeRandomizer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E0ADC5EE40A200367CBC4D /* libPods-CoffeeRandomizer-tvOSTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -16,10 +16,10 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* AeropressProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AeropressProjectTests.m */; };
-		5B36D400514E92FA3152BB3D /* libPods-AeropressProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B32E412D366424664A992 /* libPods-AeropressProject.a */; };
-		6DB289B1220CCF656F573DE5 /* libPods-AeropressProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3CC45CB167A45F295CE040 /* libPods-AeropressProject-tvOS.a */; };
-		D9D4B8EC06BB087B768F3BC4 /* libPods-AeropressProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F5B5D3F487C4DD9BD1A1C9 /* libPods-AeropressProjectTests.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* CoffeeRandomizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CoffeeRandomizerTests.m */; };
+		5B36D400514E92FA3152BB3D /* libPods-CoffeeRandomizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641B32E412D366424664A992 /* libPods-CoffeeRandomizer.a */; };
+		6DB289B1220CCF656F573DE5 /* libPods-CoffeeRandomizer-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3CC45CB167A45F295CE040 /* libPods-CoffeeRandomizer-tvOS.a */; };
+		D9D4B8EC06BB087B768F3BC4 /* libPods-CoffeeRandomizerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F5B5D3F487C4DD9BD1A1C9 /* libPods-CoffeeRandomizerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,45 +28,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = AeropressProject;
+			remoteInfo = CoffeeRandomizer;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "AeropressProject-tvOS";
+			remoteInfo = "CoffeeRandomizer-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* AeropressProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AeropressProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* CoffeeRandomizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeRandomizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AeropressProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AeropressProjectTests.m; sourceTree = "<group>"; };
-		0226E76864F48DD088659250 /* Pods-AeropressProject-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOSTests/Pods-AeropressProject-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		0500062B7AB7DD41F18C5A03 /* Pods-AeropressProject-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOS.release.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOS/Pods-AeropressProject-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* AeropressProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeropressProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AeropressProject/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AeropressProject/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* CoffeeRandomizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeRandomizerTests.m; sourceTree = "<group>"; };
+		0226E76864F48DD088659250 /* Pods-CoffeeRandomizer-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeRandomizer-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeRandomizer-tvOSTests/Pods-CoffeeRandomizer-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0500062B7AB7DD41F18C5A03 /* Pods-CoffeeRandomizer-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeRandomizer-tvOS.release.xcconfig"; path = "Target Support Files/Pods-CoffeeRandomizer-tvOS/Pods-CoffeeRandomizer-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* CoffeeRandomizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeRandomizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CoffeeRandomizer/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CoffeeRandomizer/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AeropressProject/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AeropressProject/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AeropressProject/main.m; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* AeropressProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AeropressProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* AeropressProject-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AeropressProject-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D2E751C6487B50E01C06614 /* Pods-AeropressProject-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOS/Pods-AeropressProject-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		43A33556542D1F2DE9FF8548 /* Pods-AeropressProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProject/Pods-AeropressProject.debug.xcconfig"; sourceTree = "<group>"; };
-		641B32E412D366424664A992 /* libPods-AeropressProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3E0ADC5EE40A200367CBC4D /* libPods-AeropressProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B04E11F857AA098DC5538BDA /* Pods-AeropressProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject.release.xcconfig"; path = "Target Support Files/Pods-AeropressProject/Pods-AeropressProject.release.xcconfig"; sourceTree = "<group>"; };
-		D34BB6884DEB2D3B89C159CA /* Pods-AeropressProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-AeropressProjectTests/Pods-AeropressProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D4F5B5D3F487C4DD9BD1A1C9 /* libPods-AeropressProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D921195650E2660F08232951 /* Pods-AeropressProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProjectTests.release.xcconfig"; path = "Target Support Files/Pods-AeropressProjectTests/Pods-AeropressProjectTests.release.xcconfig"; sourceTree = "<group>"; };
-		EA3CC45CB167A45F295CE040 /* libPods-AeropressProject-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AeropressProject-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CoffeeRandomizer/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CoffeeRandomizer/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CoffeeRandomizer/main.m; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* CoffeeRandomizer-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoffeeRandomizer-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* CoffeeRandomizer-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CoffeeRandomizer-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2E751C6487B50E01C06614 /* Pods-CoffeeRandomizer-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeRandomizer-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeRandomizer-tvOS/Pods-CoffeeRandomizer-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		43A33556542D1F2DE9FF8548 /* Pods-CoffeeRandomizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeRandomizer.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeRandomizer/Pods-CoffeeRandomizer.debug.xcconfig"; sourceTree = "<group>"; };
+		641B32E412D366424664A992 /* libPods-CoffeeRandomizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoffeeRandomizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3E0ADC5EE40A200367CBC4D /* libPods-CoffeeRandomizer-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoffeeRandomizer-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B04E11F857AA098DC5538BDA /* Pods-CoffeeRandomizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeRandomizer.release.xcconfig"; path = "Target Support Files/Pods-CoffeeRandomizer/Pods-CoffeeRandomizer.release.xcconfig"; sourceTree = "<group>"; };
+		D34BB6884DEB2D3B89C159CA /* Pods-CoffeeRandomizerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeRandomizerTests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeRandomizerTests/Pods-CoffeeRandomizerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4F5B5D3F487C4DD9BD1A1C9 /* libPods-CoffeeRandomizerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoffeeRandomizerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D921195650E2660F08232951 /* Pods-CoffeeRandomizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeRandomizerTests.release.xcconfig"; path = "Target Support Files/Pods-CoffeeRandomizerTests/Pods-CoffeeRandomizerTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA3CC45CB167A45F295CE040 /* libPods-CoffeeRandomizer-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoffeeRandomizer-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F9C8185A2921AF559297B255 /* Pods-AeropressProject-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeropressProject-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-AeropressProject-tvOSTests/Pods-AeropressProject-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F9C8185A2921AF559297B255 /* Pods-CoffeeRandomizer-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeRandomizer-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-CoffeeRandomizer-tvOSTests/Pods-CoffeeRandomizer-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9D4B8EC06BB087B768F3BC4 /* libPods-AeropressProjectTests.a in Frameworks */,
+				D9D4B8EC06BB087B768F3BC4 /* libPods-CoffeeRandomizerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B36D400514E92FA3152BB3D /* libPods-AeropressProject.a in Frameworks */,
+				5B36D400514E92FA3152BB3D /* libPods-CoffeeRandomizer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DB289B1220CCF656F573DE5 /* libPods-AeropressProject-tvOS.a in Frameworks */,
+				6DB289B1220CCF656F573DE5 /* libPods-CoffeeRandomizer-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055F7E251A653468EC382ED3 /* libPods-AeropressProject-tvOSTests.a in Frameworks */,
+				055F7E251A653468EC382ED3 /* libPods-CoffeeRandomizer-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* AeropressProjectTests */ = {
+		00E356EF1AD99517003FC87E /* CoffeeRandomizerTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* AeropressProjectTests.m */,
+				00E356F21AD99517003FC87E /* CoffeeRandomizerTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = AeropressProjectTests;
+			path = CoffeeRandomizerTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,7 +122,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* AeropressProject */ = {
+		13B07FAE1A68108700A75B9A /* CoffeeRandomizer */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -133,7 +133,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = AeropressProject;
+			name = CoffeeRandomizer;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				641B32E412D366424664A992 /* libPods-AeropressProject.a */,
-				EA3CC45CB167A45F295CE040 /* libPods-AeropressProject-tvOS.a */,
-				A3E0ADC5EE40A200367CBC4D /* libPods-AeropressProject-tvOSTests.a */,
-				D4F5B5D3F487C4DD9BD1A1C9 /* libPods-AeropressProjectTests.a */,
+				641B32E412D366424664A992 /* libPods-CoffeeRandomizer.a */,
+				EA3CC45CB167A45F295CE040 /* libPods-CoffeeRandomizer-tvOS.a */,
+				A3E0ADC5EE40A200367CBC4D /* libPods-CoffeeRandomizer-tvOSTests.a */,
+				D4F5B5D3F487C4DD9BD1A1C9 /* libPods-CoffeeRandomizerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,14 +152,14 @@
 		635389D1D777EA127DC509DC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				43A33556542D1F2DE9FF8548 /* Pods-AeropressProject.debug.xcconfig */,
-				B04E11F857AA098DC5538BDA /* Pods-AeropressProject.release.xcconfig */,
-				2D2E751C6487B50E01C06614 /* Pods-AeropressProject-tvOS.debug.xcconfig */,
-				0500062B7AB7DD41F18C5A03 /* Pods-AeropressProject-tvOS.release.xcconfig */,
-				0226E76864F48DD088659250 /* Pods-AeropressProject-tvOSTests.debug.xcconfig */,
-				F9C8185A2921AF559297B255 /* Pods-AeropressProject-tvOSTests.release.xcconfig */,
-				D34BB6884DEB2D3B89C159CA /* Pods-AeropressProjectTests.debug.xcconfig */,
-				D921195650E2660F08232951 /* Pods-AeropressProjectTests.release.xcconfig */,
+				43A33556542D1F2DE9FF8548 /* Pods-CoffeeRandomizer.debug.xcconfig */,
+				B04E11F857AA098DC5538BDA /* Pods-CoffeeRandomizer.release.xcconfig */,
+				2D2E751C6487B50E01C06614 /* Pods-CoffeeRandomizer-tvOS.debug.xcconfig */,
+				0500062B7AB7DD41F18C5A03 /* Pods-CoffeeRandomizer-tvOS.release.xcconfig */,
+				0226E76864F48DD088659250 /* Pods-CoffeeRandomizer-tvOSTests.debug.xcconfig */,
+				F9C8185A2921AF559297B255 /* Pods-CoffeeRandomizer-tvOSTests.release.xcconfig */,
+				D34BB6884DEB2D3B89C159CA /* Pods-CoffeeRandomizerTests.debug.xcconfig */,
+				D921195650E2660F08232951 /* Pods-CoffeeRandomizerTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -174,9 +174,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* AeropressProject */,
+				13B07FAE1A68108700A75B9A /* CoffeeRandomizer */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AeropressProjectTests */,
+				00E356EF1AD99517003FC87E /* CoffeeRandomizerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				635389D1D777EA127DC509DC /* Pods */,
@@ -190,10 +190,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* AeropressProject.app */,
-				00E356EE1AD99517003FC87E /* AeropressProjectTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* AeropressProject-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* AeropressProject-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* CoffeeRandomizer.app */,
+				00E356EE1AD99517003FC87E /* CoffeeRandomizerTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* CoffeeRandomizer-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* CoffeeRandomizer-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,9 +208,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* AeropressProjectTests */ = {
+		00E356ED1AD99517003FC87E /* CoffeeRandomizerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AeropressProjectTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CoffeeRandomizerTests" */;
 			buildPhases = (
 				AB94112F55926E2E6AB820AF /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -222,14 +222,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = AeropressProjectTests;
-			productName = AeropressProjectTests;
-			productReference = 00E356EE1AD99517003FC87E /* AeropressProjectTests.xctest */;
+			name = CoffeeRandomizerTests;
+			productName = CoffeeRandomizerTests;
+			productReference = 00E356EE1AD99517003FC87E /* CoffeeRandomizerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* AeropressProject */ = {
+		13B07F861A680F5B00A75B9A /* CoffeeRandomizer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AeropressProject" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CoffeeRandomizer" */;
 			buildPhases = (
 				0E434A9A4EEA959B0A8ABA2A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -243,14 +243,14 @@
 			);
 			dependencies = (
 			);
-			name = AeropressProject;
-			productName = AeropressProject;
-			productReference = 13B07F961A680F5B00A75B9A /* AeropressProject.app */;
+			name = CoffeeRandomizer;
+			productName = CoffeeRandomizer;
+			productReference = 13B07F961A680F5B00A75B9A /* CoffeeRandomizer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* AeropressProject-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* CoffeeRandomizer-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AeropressProject-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CoffeeRandomizer-tvOS" */;
 			buildPhases = (
 				76B24CEDA96448C2587E2A0A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -263,14 +263,14 @@
 			);
 			dependencies = (
 			);
-			name = "AeropressProject-tvOS";
-			productName = "AeropressProject-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* AeropressProject-tvOS.app */;
+			name = "CoffeeRandomizer-tvOS";
+			productName = "CoffeeRandomizer-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* CoffeeRandomizer-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* AeropressProject-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* CoffeeRandomizer-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AeropressProject-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CoffeeRandomizer-tvOSTests" */;
 			buildPhases = (
 				3475484A662AB18A1D3E0A4E /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -282,9 +282,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "AeropressProject-tvOSTests";
-			productName = "AeropressProject-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* AeropressProject-tvOSTests.xctest */;
+			name = "CoffeeRandomizer-tvOSTests";
+			productName = "CoffeeRandomizer-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* CoffeeRandomizer-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -317,7 +317,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AeropressProject" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CoffeeRandomizer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -331,10 +331,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* AeropressProject */,
-				00E356ED1AD99517003FC87E /* AeropressProjectTests */,
-				2D02E47A1E0B4A5D006451C7 /* AeropressProject-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* AeropressProject-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* CoffeeRandomizer */,
+				00E356ED1AD99517003FC87E /* CoffeeRandomizerTests */,
+				2D02E47A1E0B4A5D006451C7 /* CoffeeRandomizer-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* CoffeeRandomizer-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -403,7 +403,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AeropressProject-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CoffeeRandomizer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -439,7 +439,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AeropressProject-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CoffeeRandomizer-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -461,7 +461,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AeropressProject-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CoffeeRandomizer-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -483,7 +483,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AeropressProjectTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CoffeeRandomizerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -496,7 +496,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AeropressProject/Pods-AeropressProject-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CoffeeRandomizer/Pods-CoffeeRandomizer-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -535,7 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AeropressProject/Pods-AeropressProject-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoffeeRandomizer/Pods-CoffeeRandomizer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -583,7 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* AeropressProjectTests.m in Sources */,
+				00E356F31AD99517003FC87E /* CoffeeRandomizerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* AeropressProjectTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* CoffeeRandomizerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,12 +618,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* AeropressProject */;
+			target = 13B07F861A680F5B00A75B9A /* CoffeeRandomizer */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* AeropressProject-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* CoffeeRandomizer-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -635,7 +635,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = AeropressProject;
+			path = CoffeeRandomizer;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -643,7 +643,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D34BB6884DEB2D3B89C159CA /* Pods-AeropressProjectTests.debug.xcconfig */;
+			baseConfigurationReference = D34BB6884DEB2D3B89C159CA /* Pods-CoffeeRandomizerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9VV2X8D4BC;
@@ -651,7 +651,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AeropressProjectTests/Info.plist;
+				INFOPLIST_FILE = CoffeeRandomizerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -661,18 +661,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeropressProject.app/AeropressProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeRandomizer.app/CoffeeRandomizer";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D921195650E2660F08232951 /* Pods-AeropressProjectTests.release.xcconfig */;
+			baseConfigurationReference = D921195650E2660F08232951 /* Pods-CoffeeRandomizerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 9VV2X8D4BC;
-				INFOPLIST_FILE = AeropressProjectTests/Info.plist;
+				INFOPLIST_FILE = CoffeeRandomizerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -682,19 +682,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeropressProject.app/AeropressProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeRandomizer.app/CoffeeRandomizer";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43A33556542D1F2DE9FF8548 /* Pods-AeropressProject.debug.xcconfig */;
+			baseConfigurationReference = 43A33556542D1F2DE9FF8548 /* Pods-CoffeeRandomizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 9VV2X8D4BC;
-				INFOPLIST_FILE = AeropressProject/Info.plist;
+				INFOPLIST_FILE = CoffeeRandomizer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -703,7 +703,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = AeropressProject;
+				PRODUCT_NAME = CoffeeRandomizer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -711,12 +711,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B04E11F857AA098DC5538BDA /* Pods-AeropressProject.release.xcconfig */;
+			baseConfigurationReference = B04E11F857AA098DC5538BDA /* Pods-CoffeeRandomizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9VV2X8D4BC;
-				INFOPLIST_FILE = AeropressProject/Info.plist;
+				INFOPLIST_FILE = CoffeeRandomizer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -725,7 +725,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = AeropressProject;
+				PRODUCT_NAME = CoffeeRandomizer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -733,7 +733,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D2E751C6487B50E01C06614 /* Pods-AeropressProject-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 2D2E751C6487B50E01C06614 /* Pods-CoffeeRandomizer-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -745,14 +745,14 @@
 				DEVELOPMENT_TEAM = 9VV2X8D4BC;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AeropressProject-tvOS/Info.plist";
+				INFOPLIST_FILE = "CoffeeRandomizer-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AeropressProject-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CoffeeRandomizer-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -762,7 +762,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0500062B7AB7DD41F18C5A03 /* Pods-AeropressProject-tvOS.release.xcconfig */;
+			baseConfigurationReference = 0500062B7AB7DD41F18C5A03 /* Pods-CoffeeRandomizer-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -774,14 +774,14 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9VV2X8D4BC;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AeropressProject-tvOS/Info.plist";
+				INFOPLIST_FILE = "CoffeeRandomizer-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AeropressProject-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CoffeeRandomizer-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -791,7 +791,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0226E76864F48DD088659250 /* Pods-AeropressProject-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 0226E76864F48DD088659250 /* Pods-CoffeeRandomizer-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -802,24 +802,24 @@
 				DEVELOPMENT_TEAM = 9VV2X8D4BC;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AeropressProject-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "CoffeeRandomizer-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AeropressProject-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CoffeeRandomizer-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeropressProject-tvOS.app/AeropressProject-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeRandomizer-tvOS.app/CoffeeRandomizer-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9C8185A2921AF559297B255 /* Pods-AeropressProject-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = F9C8185A2921AF559297B255 /* Pods-CoffeeRandomizer-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -830,17 +830,17 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9VV2X8D4BC;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "AeropressProject-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "CoffeeRandomizer-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AeropressProject-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.CoffeeRandomizer-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AeropressProject-tvOS.app/AeropressProject-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeRandomizer-tvOS.app/CoffeeRandomizer-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -949,7 +949,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AeropressProjectTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CoffeeRandomizerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -958,7 +958,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AeropressProject" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CoffeeRandomizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -967,7 +967,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AeropressProject-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CoffeeRandomizer-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -976,7 +976,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "AeropressProject-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "CoffeeRandomizer-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -985,7 +985,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AeropressProject" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "CoffeeRandomizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
