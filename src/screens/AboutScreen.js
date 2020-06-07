@@ -50,8 +50,10 @@ const AboutScreen = () => (
         <Text style={styles.bodyText}>
           So go ahead, boil a kettle of water, get out your favorite overpriced
           coffee beans, click the New Recipe button on the Recipes screen, and
-          follow the directions for a new recipe. Enjoy!
+          follow the directions for a new recipe.
         </Text>
+
+        <Text style={[styles.bodyText, {marginBottom: 0}]}>Enjoy!</Text>
       </View>
     </ScrollView>
   </SafeAreaView>
