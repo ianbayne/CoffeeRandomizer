@@ -1,6 +1,6 @@
 ## CoffeeRandomizer
 
-Brew time, coffee and water amount, coarseness of grind. All of these affect the resulting flavor of your coffee. This app generate a random coffee recipes for your AeroPress based off the different adjustable brewing factors.
+Brew time, coffee and water amount, coarseness of grind. All of these affect the resulting flavor of your coffee. This app generates random coffee recipes for your AeroPress based off the different adjustable brewing factors.
 
 <div style="float: left">
   <img src="https://user-images.githubusercontent.com/10363087/84900213-bf7e9f00-b0e4-11ea-91df-d5a0894563cb.png" width="150">
