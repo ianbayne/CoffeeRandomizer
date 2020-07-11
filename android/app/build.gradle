@@ -186,6 +186,12 @@ android {
     }
 }
 
+configurations.all {
+     resolutionStrategy {
+       force "com.facebook.soloader:soloader:0.8.2"
+     }
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
