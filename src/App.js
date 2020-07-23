@@ -10,7 +10,7 @@ import SplashScreen from 'react-native-splash-screen';
 import RecipesStackScreen from './screens/RecipesStackScreen';
 import SettingsStackScreen from './screens/SettingsStackScreen';
 
-import UnitContext from './context/unit-context';
+import UnitContext from './context/UnitContext';
 
 const Tab = createBottomTabNavigator();
 
