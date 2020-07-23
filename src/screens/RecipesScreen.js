@@ -226,7 +226,7 @@ const RecipesScreen = () => {
             </TouchableHighlight>
           </View>
           <Animated.Image
-            style={[styles.icon, {transform: [{rotate: spin}]}, ,]}
+            style={[styles.icon, {transform: [{rotate: spin}]}]}
             source={require('../assets/images/aeropress.png')}
           />
           <View style={{width: width, position: 'absolute', top: 150}}>
