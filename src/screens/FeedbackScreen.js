@@ -1,5 +1,6 @@
 import React, {useState, useRef} from 'react';
 import {View, StyleSheet, ActivityIndicator} from 'react-native';
+
 import {WebView} from 'react-native-webview';
 
 const FORM_URI =

@@ -8,6 +8,7 @@ import {
   Linking,
   ActivityIndicator,
 } from 'react-native';
+
 import {WebView} from 'react-native-webview';
 
 const AEROPRESS_DICE_URL = 'https://aero.press/products/brew-recipe-dice';
