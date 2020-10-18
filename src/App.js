@@ -14,17 +14,17 @@ import UnitContext from './context/UnitContext';
 
 const Tab = createBottomTabNavigator();
 
-const App: () => React$Node = () => {
+const App = () => {
   const [celsius, setCelsius] = useState(true);
   const [grams, setGrams] = useState(true);
 
-  const setAsyncStorageForCelsius = (celsius) => {
-    AsyncStorage.setItem('celsius', JSON.stringify(celsius));
-    setCelsius(celsius);
+  const setAsyncStorageForCelsius = (c) => {
+    AsyncStorage.setItem('celsius', JSON.stringify(c));
+    setCelsius(c);
   };
-  const setAsyncStorageForGrams = (grams) => {
-    AsyncStorage.setItem('grams', JSON.stringify(grams));
-    setGrams(grams);
+  const setAsyncStorageForGrams = (g) => {
+    AsyncStorage.setItem('grams', JSON.stringify(g));
+    setGrams(g);
   };
 
   const value = {
