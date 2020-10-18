@@ -35,7 +35,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    SplashScreen.hide();
+    SplashScreen?.hide(); // SplashScreen is undefined in jest. Why?
     (async () => {
       const storedCelsius = await AsyncStorage.getItem('celsius');
       if (storedCelsius) {
