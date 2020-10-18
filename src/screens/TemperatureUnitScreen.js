@@ -1,13 +1,13 @@
-import React, {useContext} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import React, { useContext } from 'react';
+import { Text, View, StyleSheet } from 'react-native';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import UnitContext from '../context/UnitContext';
 import SettingsRow from '../components/SettingsRow';
 
-const TemperatureUnitScreen = ({navigation}) => {
-  const {celsius, setAsyncStorageForCelsius} = useContext(UnitContext);
+const TemperatureUnitScreen = ({ navigation }) => {
+  const { celsius, setAsyncStorageForCelsius } = useContext(UnitContext);
 
   function switchToCelsius() {
     setAsyncStorageForCelsius(true);

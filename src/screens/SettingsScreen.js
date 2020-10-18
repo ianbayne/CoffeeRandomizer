@@ -1,14 +1,14 @@
-import React, {useContext} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import React, { useContext } from 'react';
+import { Text, View, StyleSheet } from 'react-native';
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {name, version} from '../../package.json';
+import { name, version } from '../../package.json';
 import UnitContext from '../context/UnitContext';
 import SettingsRow from '../components/SettingsRow';
 
-const SettingsScreen = ({navigation}) => {
-  const {celsius, grams} = useContext(UnitContext);
+const SettingsScreen = ({ navigation }) => {
+  const { celsius, grams } = useContext(UnitContext);
 
   return (
     <View style={styles.container}>
@@ -82,7 +82,7 @@ const SettingsScreen = ({navigation}) => {
           }
         />
       </View>
-      <Text style={{textAlign: 'center', marginTop: 20}}>
+      <Text style={{ textAlign: 'center', marginTop: 20 }}>
         {`${name} v${version}`}
       </Text>
     </View>

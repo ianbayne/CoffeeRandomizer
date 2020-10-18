@@ -1,7 +1,7 @@
-import React, {useState, useRef} from 'react';
-import {View, StyleSheet, ActivityIndicator} from 'react-native';
+import React, { useState, useRef } from 'react';
+import { View, StyleSheet, ActivityIndicator } from 'react-native';
 
-import {WebView} from 'react-native-webview';
+import { WebView } from 'react-native-webview';
 
 const FORM_URI =
   'https://docs.google.com/forms/d/e/1FAIpQLSfezWSiaL5r0zau9iCVie9K4G3tIemrhbQPEi61tlk7OUHd_g/viewform?usp=sf_link';

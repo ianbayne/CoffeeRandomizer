@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   ScrollView,
   View,
@@ -9,7 +9,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 
-import {WebView} from 'react-native-webview';
+import { WebView } from 'react-native-webview';
 
 const AEROPRESS_DICE_URL = 'https://aero.press/products/brew-recipe-dice';
 const YOUTUBE_URL = 'https://www.youtube.com/embed/SHdXC_88_2g';
@@ -26,10 +26,10 @@ const CreditsScreen = () => {
   }
 
   return (
-    <ScrollView style={{backgroundColor: '#f9f9f9', flex: 1}}>
+    <ScrollView style={{ backgroundColor: '#f9f9f9', flex: 1 }}>
       <View style={styles.content}>
         <View style={styles.segment}>
-          <Text style={{fontWeight: 'bold', fontSize: 24, marginBottom: 30}}>
+          <Text style={{ fontWeight: 'bold', fontSize: 24, marginBottom: 30 }}>
             Inspiration
           </Text>
 
@@ -70,7 +70,7 @@ const CreditsScreen = () => {
               paddingLeft: 20,
             }}>
             <Text>
-              <Text style={{fontSize: 20}}>Inspired by </Text>
+              <Text style={{ fontSize: 20 }}>Inspired by </Text>
               <Text
                 onPress={openUrl}
                 style={{
@@ -84,7 +84,7 @@ const CreditsScreen = () => {
           </View>
         </View>
         <View style={styles.segment}>
-          <Text style={{fontWeight: 'bold', fontSize: 24, marginBottom: 30}}>
+          <Text style={{ fontWeight: 'bold', fontSize: 24, marginBottom: 30 }}>
             Icon
           </Text>
           <Image
@@ -96,7 +96,7 @@ const CreditsScreen = () => {
             }}
             source={require('../assets/images/aeropress.png')}
           />
-          <Text style={{fontSize: 20, paddingLeft: 20}}>
+          <Text style={{ fontSize: 20, paddingLeft: 20 }}>
             Aeropress by Ben Biondo from the Noun Project.
           </Text>
         </View>

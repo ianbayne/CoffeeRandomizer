@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, { useState, useContext } from 'react';
 import {
   SafeAreaView,
   TouchableHighlight,
@@ -23,10 +23,10 @@ import {
   BLOOM_TIME_AND_INVERSION,
 } from '../constants';
 
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const RecipesScreen = () => {
-  const {celsius, grams} = useContext(UnitContext);
+  const { celsius, grams } = useContext(UnitContext);
 
   const [stirring, setStirring] = useState(null);
   const [waterTemp, setWaterTemp] = useState(null);
@@ -90,11 +90,10 @@ const RecipesScreen = () => {
         <RecipeStep stepCount={1}>
           Grind
           <Text
-            style={{fontWeight: 'bold'}}>{` ${convertedCoffeeWeight} `}</Text>
+            style={{ fontWeight: 'bold' }}>{` ${convertedCoffeeWeight} `}</Text>
           of coffee to {grindAndBrewTime.grind !== 'your desired' && 'a '}
-          <Text style={{fontWeight: 'bold'}}>{`${
-            grindAndBrewTime.grind
-          } `}</Text>
+          <Text
+            style={{ fontWeight: 'bold' }}>{`${grindAndBrewTime.grind} `}</Text>
           consistency.
         </RecipeStep>
       );
@@ -126,9 +125,10 @@ const RecipesScreen = () => {
         <RecipeStep stepCount={2}>
           Heat
           <Text
-            style={{fontWeight: 'bold'}}>{` ${convertedWaterWeight} `}</Text>
+            style={{ fontWeight: 'bold' }}>{` ${convertedWaterWeight} `}</Text>
           of water to a temperature of
-          <Text style={{fontWeight: 'bold'}}>{` ${convertedWaterTemp}.`}</Text>
+          <Text
+            style={{ fontWeight: 'bold' }}>{` ${convertedWaterTemp}.`}</Text>
         </RecipeStep>
       );
     }
@@ -139,7 +139,7 @@ const RecipesScreen = () => {
       return (
         <RecipeStep stepCount={3}>
           Put the aeropress in
-          <Text style={{fontWeight: 'bold'}}>
+          <Text style={{ fontWeight: 'bold' }}>
             {` ${bloomTimeAndInversion.orientation} `}
           </Text>
           orientation and add the coffee.
@@ -153,11 +153,11 @@ const RecipesScreen = () => {
       return (
         <RecipeStep stepCount={4}>
           Add
-          <Text style={{fontWeight: 'bold'}}>
+          <Text style={{ fontWeight: 'bold' }}>
             {` ${bloomTimeAndInversion.water} `}
           </Text>
           and bloom for
-          <Text style={{fontWeight: 'bold'}}>
+          <Text style={{ fontWeight: 'bold' }}>
             {` ${bloomTimeAndInversion.time}.`}
           </Text>
         </RecipeStep>
@@ -177,7 +177,7 @@ const RecipesScreen = () => {
       return (
         <RecipeStep stepCount={5}>
           Add the remaining water and wait for
-          <Text style={{fontWeight: 'bold'}}>
+          <Text style={{ fontWeight: 'bold' }}>
             {` ${grindAndBrewTime.time}.`}
           </Text>
         </RecipeStep>
@@ -212,9 +212,9 @@ const RecipesScreen = () => {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView style={{flex: 1, backgroundColor: '#f9f9f9'}}>
-        <ScrollView style={{flex: 1}} contentContainerStyle={{flex: 1}}>
-          <View style={{marginBottom: 50}} />
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#f9f9f9' }}>
+        <ScrollView style={{ flex: 1 }} contentContainerStyle={{ flex: 1 }}>
+          <View style={{ marginBottom: 50 }} />
           <View style={styles.buttonAndIconContainer}>
             <TouchableHighlight
               style={styles.button}
@@ -226,10 +226,10 @@ const RecipesScreen = () => {
             </TouchableHighlight>
           </View>
           <Animated.Image
-            style={[styles.icon, {transform: [{rotate: spin}]}]}
+            style={[styles.icon, { transform: [{ rotate: spin }] }]}
             source={require('../assets/images/aeropress.png')}
           />
-          <View style={{width: width, position: 'absolute', top: 150}}>
+          <View style={{ width: width, position: 'absolute', top: 150 }}>
             <View style={styles.recipeContainer}>
               {renderGrindCoffeeStep()}
               {renderHeatWaterStep()}

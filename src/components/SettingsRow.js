@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableHighlight, Text, View, StyleSheet} from 'react-native';
+import { TouchableHighlight, Text, View, StyleSheet } from 'react-native';
 
 const SettingsRow = ({
   navigation,
@@ -14,7 +14,7 @@ const SettingsRow = ({
     <TouchableHighlight
       style={[
         styles.unitsSelectionRow,
-        {borderBottomWidth: 1, borderColor: '#c4c4c4'},
+        { borderBottomWidth: 1, borderColor: '#c4c4c4' },
         outerStyle,
       ]}
       onPress={onPress}

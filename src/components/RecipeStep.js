@@ -1,11 +1,14 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-const RecipeStep = ({stepCount, children}) => {
+const RecipeStep = ({ stepCount, children }) => {
   return (
-    <View style={{flexDirection: 'row'}}>
-      <Text style={({paddingRight: 5}, styles.steps)}>{`${stepCount}. `}</Text>
-      <Text style={({flex: 1, paddingLeft: 10}, styles.steps)}>{children}</Text>
+    <View style={{ flexDirection: 'row' }}>
+      <Text
+        style={({ paddingRight: 5 }, styles.steps)}>{`${stepCount}. `}</Text>
+      <Text style={({ flex: 1, paddingLeft: 10 }, styles.steps)}>
+        {children}
+      </Text>
     </View>
   );
 };

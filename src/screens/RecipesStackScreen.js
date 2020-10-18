@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import RecipesScreen from './RecipesScreen';
 
@@ -13,7 +13,7 @@ const RecipesStackScreen = () => {
         headerStyle: {
           backgroundColor: '#593C1F',
         },
-        headerTitleStyle: {color: 'white'},
+        headerTitleStyle: { color: 'white' },
       }}>
       <RecipesStack.Screen name="Recipes" component={RecipesScreen} />
     </RecipesStack.Navigator>

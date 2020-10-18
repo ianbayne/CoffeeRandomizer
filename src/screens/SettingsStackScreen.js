@@ -1,7 +1,7 @@
 import React from 'react';
-import {Platform} from 'react-native';
+import { Platform } from 'react-native';
 
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import SettingsScreen from './SettingsScreen';
 import TemperatureUnitScreen from './TemperatureUnitScreen';
@@ -19,7 +19,7 @@ const SettingsStackScreen = () => {
         headerStyle: {
           backgroundColor: '#593C1F',
         },
-        headerTitleStyle: {color: 'white'},
+        headerTitleStyle: { color: 'white' },
         headerTintColor: '#ff9900',
         headerLeft: Platform.select({
           android: false,

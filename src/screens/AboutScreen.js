@@ -1,22 +1,22 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, View, Text, StyleSheet} from 'react-native';
+import { SafeAreaView, ScrollView, View, Text, StyleSheet } from 'react-native';
 
 const AboutScreen = () => (
-  <SafeAreaView style={{flex: 1}}>
-    <ScrollView style={{flex: 1}}>
+  <SafeAreaView style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1 }}>
       <View style={styles.content}>
         <Text style={styles.headerText}>Hi there.</Text>
         <Text style={styles.bodyText}>
           I hope you're liking my app! While I suspect its self-explanatory, the{' '}
-          <Text style={{textDecorationLine: 'line-through'}}>main</Text>{' '}
-          <Text style={{fontWeight: 'bold'}}>only</Text> way to use it is for
+          <Text style={{ textDecorationLine: 'line-through' }}>main</Text>{' '}
+          <Text style={{ fontWeight: 'bold' }}>only</Text> way to use it is for
           generating random coffee recipes for your Aeropress.
         </Text>
         <Text style={styles.bodyText}>
           I made this app for a couple of reasons:
         </Text>
         <View style={styles.list}>
-          <View style={[styles.listRow, {marginBottom: 5}]}>
+          <View style={[styles.listRow, { marginBottom: 5 }]}>
             <Text style={styles.listItemNumber}>1.</Text>
             <Text style={styles.listItemText}>
               My deep devotion and commitment to drinking way more coffee than
@@ -32,7 +32,7 @@ const AboutScreen = () => (
 
         <Text style={styles.bodyText}>Plans for the future include:</Text>
         <View style={styles.list}>
-          <View style={[styles.listRow, {marginBottom: 5}]}>
+          <View style={[styles.listRow, { marginBottom: 5 }]}>
             <Text style={styles.listItemNumber}>•</Text>
             <Text style={styles.listItemText}>
               Adding the ability to save recipes
@@ -53,7 +53,7 @@ const AboutScreen = () => (
           follow the directions for a new recipe.
         </Text>
 
-        <Text style={[styles.bodyText, {marginBottom: 0}]}>Enjoy!</Text>
+        <Text style={[styles.bodyText, { marginBottom: 0 }]}>Enjoy!</Text>
       </View>
     </ScrollView>
   </SafeAreaView>
