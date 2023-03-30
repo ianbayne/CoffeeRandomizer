@@ -26,24 +26,12 @@ const CreditsScreen = () => {
   }
 
   return (
-    <ScrollView style={{ backgroundColor: '#f9f9f9', flex: 1 }}>
+    <ScrollView style={styles.container}>
       <View style={styles.content}>
         <View style={styles.segment}>
-          <Text style={{ fontWeight: 'bold', fontSize: 24, marginBottom: 30 }}>
-            Inspiration
-          </Text>
+          <Text style={styles.header}>Inspiration</Text>
 
-          <View
-            style={{
-              shadowColor: '#000',
-              shadowOffset: {
-                width: 1,
-                height: 1,
-              },
-              shadowOpacity: 0.27,
-              shadowRadius: 4.65,
-              elevation: 6,
-            }}>
+          <View style={styles.webViewContainer}>
             {isLoading && (
               <ActivityIndicator
                 animating={isLoading}
@@ -56,12 +44,7 @@ const CreditsScreen = () => {
               source={{
                 uri: YOUTUBE_URL,
               }}
-              style={{
-                height: 157.5,
-                width: 230,
-                alignSelf: 'center',
-                marginBottom: 20,
-              }}
+              style={styles.webView}
             />
           </View>
 
@@ -71,12 +54,7 @@ const CreditsScreen = () => {
             }}>
             <Text>
               <Text style={{ fontSize: 20 }}>Inspired by </Text>
-              <Text
-                onPress={openUrl}
-                style={{
-                  fontSize: 20,
-                  opacity: 0.5,
-                }}>
+              <Text onPress={openUrl} style={styles.linkText}>
                 James Hoffman's Coffee Brewing Dice
               </Text>
               <Text>.</Text>
@@ -84,16 +62,9 @@ const CreditsScreen = () => {
           </View>
         </View>
         <View style={styles.segment}>
-          <Text style={{ fontWeight: 'bold', fontSize: 24, marginBottom: 30 }}>
-            Icon
-          </Text>
+          <Text style={styles.header}>Icon</Text>
           <Image
-            style={{
-              height: 100,
-              width: 48,
-              marginBottom: 40,
-              alignSelf: 'center',
-            }}
+            style={styles.icon}
             source={require('../assets/images/aeropress.png')}
           />
           <Text style={{ fontSize: 20, paddingLeft: 20 }}>
@@ -106,9 +77,28 @@ const CreditsScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#f9f9f9',
+    flex: 1,
+  },
   content: {
     margin: 40,
     padding: 15,
+  },
+  header: {
+    fontWeight: 'bold',
+    fontSize: 24,
+    marginBottom: 30,
+  },
+  webViewContainer: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
   },
   segment: {
     marginBottom: 60,
@@ -121,6 +111,22 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 15,
     left: 0,
+  },
+  webView: {
+    height: 157.5,
+    width: 230,
+    alignSelf: 'center',
+    marginBottom: 20,
+  },
+  linkText: {
+    fontSize: 20,
+    opacity: 0.5,
+  },
+  icon: {
+    height: 100,
+    width: 48,
+    marginBottom: 40,
+    alignSelf: 'center',
   },
 });
 

@@ -53,7 +53,7 @@ const AboutScreen = () => (
           follow the directions for a new recipe.
         </Text>
 
-        <Text style={[styles.bodyText, { marginBottom: 0 }]}>Enjoy!</Text>
+        <Text style={styles.bodyText}>Enjoy!</Text>
       </View>
     </ScrollView>
   </SafeAreaView>
