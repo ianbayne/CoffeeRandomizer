@@ -34,17 +34,17 @@ const RecipesScreen = () => {
   const [grindAndBrewTime, setGrindAndBrewTime] = useState(null);
   const [bloomTimeAndInversion, setBloomTimeAndInversion] = useState(null);
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   function selectRandomItem(items) {
     return items[Math.floor(Math.random() * items.length)];
   }
 
-  function convertCelsiusToFahrenheit(celsiusTemperature) {
+  function convertCelsiusToFahrenheit(celsiusTemperature: number) {
     return celsiusTemperature * 1.8 + 32;
   }
 
-  function convertGramsToOunces(grams) {
+  function convertGramsToOunces(grams: number) {
     return (grams * 0.03527396195).toFixed(2);
   }
 
@@ -293,3 +293,4 @@ const styles = StyleSheet.create({
 });
 
 export default RecipesScreen;
+

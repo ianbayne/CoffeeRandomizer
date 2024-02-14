@@ -29,7 +29,7 @@ const INJECTED_JAVASCRIPT = `const requiredLegend = document.getElementsByClassN
   true;`;
 
 const FeedbackScreen = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean | null>(true);
   const webref = useRef(null);
 
   function handleOnLoad() {
