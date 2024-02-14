@@ -1,7 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const RecipeStep = ({ stepCount, children }) => {
+type Props = {
+  stepCount: number;
+  children: React.ReactNode;
+};
+
+const RecipeStep = ({ stepCount, children }: Props) => {
   return (
     <View style={styles.container}>
       <Text

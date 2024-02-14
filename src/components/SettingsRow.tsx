@@ -1,6 +1,15 @@
 import React from 'react';
 import { TouchableHighlight, Text, View, StyleSheet } from 'react-native';
 
+type Props = {
+  settingUnit?: React.ReactNode;
+  icon: any;
+  onPress: () => void;
+  settingName: string;
+  outerStyle?: React.CSSProperties;
+  disabled?: boolean;
+};
+
 const SettingsRow = ({
   navigation,
   settingUnit,
@@ -9,7 +18,7 @@ const SettingsRow = ({
   settingName,
   outerStyle,
   disabled,
-}) => {
+}: Props) => {
   return (
     <TouchableHighlight
       style={[
