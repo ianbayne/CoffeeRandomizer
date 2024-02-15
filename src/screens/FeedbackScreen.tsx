@@ -30,11 +30,11 @@ const INJECTED_JAVASCRIPT = `const requiredLegend = document.getElementsByClassN
 
 const FeedbackScreen = () => {
   const [isLoading, setIsLoading] = useState<boolean | null>(true);
-  const webref = useRef(null);
+  const webViewRef = useRef<any>(null);
 
   function handleOnLoad() {
     setIsLoading(false);
-    webref.current.injectJavaScript(INJECTED_JAVASCRIPT);
+    webViewRef.current.injectJavaScript(INJECTED_JAVASCRIPT);
   }
 
   return (
@@ -51,7 +51,7 @@ const FeedbackScreen = () => {
         source={{
           uri: FORM_URI,
         }}
-        ref={webref}
+        ref={webViewRef}
         scalesPageToFit={false}
         javaScriptEnabled={true}
       />
