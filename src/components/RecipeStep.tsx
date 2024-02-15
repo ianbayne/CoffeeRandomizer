@@ -10,8 +10,13 @@ const RecipeStep = ({ stepCount, children }: Props) => {
   return (
     <View style={styles.container}>
       <Text
-        style={({ paddingRight: 5 }, styles.steps)}>{`${stepCount}. `}</Text>
-      <Text style={({ flex: 1, paddingLeft: 10 }, styles.steps)}>
+        // TODO: Should this be style={[{ paddingRight: 5 }, styles.steps]}
+        style={
+          ({ paddingRight: 5 }, styles.steps)
+        }>{`${stepCount}. `}</Text>{' '}
+      <Text
+        // TODO: Should this be style={[{ flex: 1, paddingLeft: 10 }, styles.steps]}
+        style={({ flex: 1, paddingLeft: 10 }, styles.steps)}>
         {children}
       </Text>
     </View>
