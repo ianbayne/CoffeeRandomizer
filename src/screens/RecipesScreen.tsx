@@ -28,15 +28,15 @@ const { width, height } = Dimensions.get('window');
 const RecipesScreen = () => {
   const { celsius, grams } = useContext(UnitContext);
 
-  const [stirring, setStirring] = useState(null);
-  const [waterTemp, setWaterTemp] = useState(null);
-  const [coffeeToWaterRatio, setCoffeeToWaterRatio] = useState(null);
-  const [grindAndBrewTime, setGrindAndBrewTime] = useState(null);
-  const [bloomTimeAndInversion, setBloomTimeAndInversion] = useState(null);
+  const [stirring, setStirring] = useState<any>(null);
+  const [waterTemp, setWaterTemp] = useState<any>(null);
+  const [coffeeToWaterRatio, setCoffeeToWaterRatio] = useState<any>(null);
+  const [grindAndBrewTime, setGrindAndBrewTime] = useState<any>(null);
+  const [bloomTimeAndInversion, setBloomTimeAndInversion] = useState<any>(null);
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  function selectRandomItem(items) {
+  function selectRandomItem(items: any[]) {
     return items[Math.floor(Math.random() * items.length)];
   }
 
