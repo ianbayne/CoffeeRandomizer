@@ -6,7 +6,11 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import UnitContext from '../context/UnitContext';
 import SettingsRow from '../components/SettingsRow';
 
-const TemperatureUnitScreen = ({ navigation }) => {
+type Props = {
+  navigation: any;
+};
+
+const TemperatureUnitScreen = ({ navigation }: Props) => {
   const { celsius, setAsyncStorageForCelsius } = useContext(UnitContext);
 
   function switchToCelsius() {
