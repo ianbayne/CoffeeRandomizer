@@ -2,11 +2,12 @@ import React from 'react';
 import { TouchableHighlight, Text, View, StyleSheet } from 'react-native';
 
 type Props = {
+  navigation?: any;
   settingUnit?: React.ReactNode;
   icon: any;
   onPress: () => void;
   settingName: string;
-  outerStyle?: React.CSSProperties;
+  outerStyle?: any;
   disabled?: boolean;
 };
 
