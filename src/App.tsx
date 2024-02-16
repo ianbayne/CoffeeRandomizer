@@ -17,11 +17,11 @@ const App = () => {
   const [celsius, setCelsius] = useState(true);
   const [grams, setGrams] = useState(true);
 
-  const setAsyncStorageForCelsius = (c) => {
+  const setAsyncStorageForCelsius = (c: any) => {
     AsyncStorage.setItem('celsius', JSON.stringify(c));
     setCelsius(c);
   };
-  const setAsyncStorageForGrams = (g) => {
+  const setAsyncStorageForGrams = (g: any) => {
     AsyncStorage.setItem('grams', JSON.stringify(g));
     setGrams(g);
   };
@@ -53,7 +53,7 @@ const App = () => {
         <Tab.Navigator
           initialRouteName="Recipes"
           screenOptions={({ route }) => ({
-            tabBarIcon: ({ _, color, size }) => {
+            tabBarIcon: ({ focused, color, size }) => {
               let iconName;
 
               if (route.name === 'Recipes') {
@@ -67,8 +67,10 @@ const App = () => {
                   android: 'md-settings',
                 });
               }
-
-              return <Ionicons name={iconName} size={size} color={color} />;
+              
+              if (iconName) {
+                return <Ionicons name={iconName} size={size} color={color} />;
+              }
             },
           })}
           tabBarOptions={{

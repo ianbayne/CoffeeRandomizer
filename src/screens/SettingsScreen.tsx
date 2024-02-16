@@ -7,7 +7,11 @@ import { name, version } from '../../package.json';
 import UnitContext from '../context/UnitContext';
 import SettingsRow from '../components/SettingsRow';
 
-const SettingsScreen = ({ navigation }) => {
+type Props = {
+  navigation: any;
+};
+
+const SettingsScreen = ({ navigation }: Props) => {
   const { celsius, grams } = useContext(UnitContext);
 
   return (
