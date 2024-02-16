@@ -12,30 +12,28 @@ import CreditsScreen from './CreditsScreen';
 
 const SettingsStack = createStackNavigator();
 
-const SettingsStackScreen = () => {
-  return (
-    <SettingsStack.Navigator
-      screenOptions={{
-        headerStyle: {
-          backgroundColor: '#593C1F',
-        },
-        headerTitleStyle: { color: 'white' },
-        headerTintColor: '#ff9900',
-        headerLeft: Platform.select({
-          android: false,
-        }),
-      }}>
-      <SettingsStack.Screen name="Settings" component={SettingsScreen} />
-      <SettingsStack.Screen
-        name="Temperature Unit"
-        component={TemperatureUnitScreen}
-      />
-      <SettingsStack.Screen name="Weight Unit" component={WeightUnitScreen} />
-      <SettingsStack.Screen name="About" component={AboutScreen} />
-      <SettingsStack.Screen name="Feedback" component={FeedbackScreen} />
-      <SettingsStack.Screen name="Credits" component={CreditsScreen} />
-    </SettingsStack.Navigator>
-  );
-};
+const SettingsStackScreen = () => (
+  <SettingsStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#593C1F',
+      },
+      headerTitleStyle: { color: 'white' },
+      headerTintColor: '#ff9900',
+      headerLeft: Platform.select({
+        android: false,
+      }),
+    }}>
+    <SettingsStack.Screen name="Settings" component={SettingsScreen} />
+    <SettingsStack.Screen
+      name="Temperature Unit"
+      component={TemperatureUnitScreen}
+    />
+    <SettingsStack.Screen name="Weight Unit" component={WeightUnitScreen} />
+    <SettingsStack.Screen name="About" component={AboutScreen} />
+    <SettingsStack.Screen name="Feedback" component={FeedbackScreen} />
+    <SettingsStack.Screen name="Credits" component={CreditsScreen} />
+  </SettingsStack.Navigator>
+);
 
 export default SettingsStackScreen;
