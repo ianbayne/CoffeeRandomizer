@@ -26,13 +26,6 @@ const App = () => {
     setGrams(g);
   };
 
-  const value = {
-    celsius,
-    setAsyncStorageForCelsius,
-    grams,
-    setAsyncStorageForGrams,
-  };
-
   useEffect(() => {
     SplashScreen?.hide(); // SplashScreen is undefined in jest. Why?
     (async () => {
@@ -48,7 +41,12 @@ const App = () => {
   }, []);
 
   return (
-    <UnitContext.Provider value={value}>
+    <UnitContext.Provider value={{
+      celsius,
+      setCelsius: setAsyncStorageForCelsius,
+      grams,
+      setGrams: setAsyncStorageForGrams,
+    }}>
       <NavigationContainer>
         <Tab.Navigator
           initialRouteName="Recipes"
